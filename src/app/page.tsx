@@ -40,7 +40,7 @@ export default function Home() {
           ))}
         </div>
         <Link href="/people/" className="mt-8 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy">
-          All thirty-one people
+          All thirty-three people
         </Link>
       </Band>
 
@@ -52,9 +52,9 @@ export default function Home() {
             </H2>
             <Prose className="mt-6">
               <p>
-                It will sit between 35 and 40 degrees, and the monsoon usually breaks over the city
-                during the week. Every debating room is air conditioned. Carry a bottle into each
-                one.
+                Temperatures will range between 35 and 40 degrees, with the monsoon typically
+                breaking over the city during the week. All debating rooms are air-conditioned, but
+                we recommend carrying a bottle of water with you into each room.
               </p>
               <p>
                 The Qutub Minar is five minutes from campus. A thirteenth-century reservoir and a

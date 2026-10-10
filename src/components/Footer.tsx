@@ -5,7 +5,7 @@ import { site, footerNav } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="on-navy relative isolate mt-16 overflow-hidden bg-navy text-cream">
+    <footer className="on-navy relative isolate overflow-hidden bg-navy text-cream">
       <div className="grain absolute inset-0 -z-10" />
       <div className="mx-auto max-w-[1180px] px-4 py-10">
         <Rail inverted left={site.datesLabel} right={`${site.venue}`} />

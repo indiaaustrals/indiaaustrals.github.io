@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { PageHead, Band, H2, Pending } from "@/components/Shell";
+import { PageHead, Band, H2 } from "@/components/Shell";
 import { people, personBySlug, groupLabel } from "@/content/people";
 import PersonCard from "@/components/PersonCard";
 import { eventBySlug } from "@/content/events";
@@ -45,10 +45,14 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           { k: "Role here", v: p.role },
           ...(p.country ? [{ k: "Country", v: p.country }] : []),
           ...(p.region ? [{ k: "Region", v: p.region }] : []),
-          {
-            k: "Record",
-            v: p.credits.length ? `${p.credits.length} entries, ${mine.size} tournaments` : "Not published",
-          },
+          ...(p.bio
+            ? []
+            : [
+                {
+                  k: "Record",
+                  v: p.credits.length ? `${p.credits.length} entries, ${mine.size} tournaments` : "Not published",
+                },
+              ]),
         ]}
       >
         {p.photo && (
@@ -66,9 +70,9 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
       </PageHead>
 
       <Band>
-        {p.credits.length === 0 ? (
-          <>
-            <H2 sub={`Twenty-one people do this job, one or two for each debating circuit Australs reaches. ${p.name} covers ${p.country}.`}>
+        {p.group === "advisor" && (
+          <div className="mb-12">
+            <H2 sub={`Nineteen people do this job, one or two for each debating circuit Australs reaches. ${p.name} covers ${p.country}.`}>
               What an advisor does
             </H2>
             <div className="mt-7 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,19 +87,14 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                 </div>
               ))}
             </div>
+          </div>
+        )}
 
-            <div className="mt-10 max-w-[64ch]">
-              <Pending who="Rajat and Krishnatara">
-                Advisor debating records exist. Nobody put them on the posters, so we have nothing
-                to publish here yet.
-              </Pending>
-            </div>
-          </>
-        ) : (
+        {p.credits.length > 0 ? (
           <>
             <H2
               count={`${p.credits.length} entries`}
-              sub="Taken line by line from the tournament's own announcement posters. Nothing added, nothing inferred."
+              sub="Taken line by line from the tournament's own announcement posters and the bid document. Nothing added, nothing inferred."
             >
               Debating record
             </H2>
@@ -125,11 +124,21 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
               ))}
             </div>
           </>
+        ) : p.bio ? (
+          <>
+            <H2>About</H2>
+            <p className="mt-6 max-w-[64ch] text-[15.5px] leading-[1.72] text-ink/85">{p.bio}</p>
+          </>
+        ) : (
+          <p className="max-w-[64ch] text-[15px] leading-[1.7] text-ink/82">
+            {p.name.split(" ")[0]} joined the organising committee after the posters went out, so
+            there is no published record for us to copy here yet.
+          </p>
         )}
 
         {siblings.length > 0 && (
           <div className="mt-12">
-            <H2 sub={`The rest of the people carrying this tournament into ${p.region}.`}>
+            <H2 sub={p.region ? `The rest of the people carrying this tournament into ${p.region}.` : undefined}>
               {p.group === "advisor" ? `Also in ${p.region}` : "Alongside"}
             </H2>
             <div className="mt-7 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">

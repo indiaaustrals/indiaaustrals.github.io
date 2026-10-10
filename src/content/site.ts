@@ -9,7 +9,7 @@ export const site = {
   end: "2027-07-04",
   datesLabel: "27 June – 4 July 2027",
   partners: ["Indian Debating League", "IIT Delhi Debating Society"],
-  buildUpdated: "18 September 2026",
+  buildUpdated: "10 October 2026",
 };
 
 export const nav = [
@@ -64,4 +64,4 @@ export const footerNav = [
  * leave it blank and the page says so honestly instead of pretending.
  */
 export const interestForm = { action: "", nameField: "", emailField: "", instField: "" };
-export const contactEmail = "";
+export const contactEmail = "indiaaustrals@indiandebatingleague.com";

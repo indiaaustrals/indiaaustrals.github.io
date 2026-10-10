@@ -17,6 +17,8 @@ export type Person = {
   region?: string;
   photo?: string;
   affiliation?: string;
+  /** A short paragraph, for people whose record is not a list of tournaments. */
+  bio?: string;
   credits: Credit[];
 };
 
@@ -192,30 +194,217 @@ export const people: Person[] = [
       { event: "dtu-pd", year: "2023", role: "Convenor" },
     ],
   },
-  { slug: "anjali", name: "Anjali", group: "senior", role: "Senior Advisor", photo: "anjali", credits: [] },
-  { slug: "kamal", name: "Kamal", group: "senior", role: "Senior Advisor", photo: "kamal", credits: [] },
+  {
+    slug: "shivangi-sharma",
+    name: "Shivangi Sharma",
+    group: "oc",
+    role: "Organising Committee",
+    country: "India",
+    region: "South Asia",
+    credits: [],
+  },
+  {
+    slug: "garvit-gosain",
+    name: "Garvit Gosain",
+    group: "oc",
+    role: "Organising Committee",
+    country: "India",
+    region: "South Asia",
+    credits: [],
+  },
+  {
+    slug: "anjali",
+    name: "Anjali Tiwary",
+    group: "senior",
+    role: "Senior Advisor",
+    photo: "anjali",
+    bio: "An EdTech entrepreneur with over twenty years in strategy, digital transformation, consulting and scaling organisations. She has held leadership roles at GE Capital, Genpact and in the Future Skills ecosystem, has organised many large tournaments, and brings deep experience of building and growing large learning communities.",
+    credits: [],
+  },
+  {
+    slug: "kamal",
+    name: "Kamal Kashyap",
+    group: "senior",
+    role: "Senior Advisor",
+    photo: "kamal",
+    bio: "Co-founder of the Indian Debating League, with a decade in EdTech. He has championed debating as a skill every student should learn, and has supported Indian teams competing at the majors.",
+    credits: [],
+  },
 ];
 
-const advisors: [string, string, string][] = [
-  ["Aayana Rai Bhojani", "India", "South Asia"],
-  ["Daniel Victor", "Sri Lanka", "South Asia"],
-  ["Sajid Asbat Khandaker", "Bangladesh", "South Asia"],
-  ["Srijan Poudel", "Nepal", "South Asia"],
-  ["Bea Legaspi", "Philippines", "South East Asia"],
-  ["Ian Dylan Chai", "Malaysia / Singapore", "South East Asia"],
-  ["Patrick Cheang", "Malaysia", "South East Asia"],
-  ["Tengku Omar", "Indonesia", "South East Asia"],
-  ["Vũ Anh Tuấn", "Vietnam", "South East Asia"],
-  ["Donner Tang", "Macau", "North East Asia"],
-  ["Minami Matsushima", "Japan", "North East Asia"],
-  ["Ricky Jin", "China", "North East Asia"],
-  ["Youngwoo Park", "South Korea", "North East Asia"],
-  ["Aisha O'Malley", "New Zealand", "Oceania"],
-  ["Jordyn Gibson", "Australia", "Oceania"],
-  ["Kat Cheng", "Australia", "Oceania"],
-  ["Jane Mentzinger", "USA", "Beyond Australasia"],
-  ["Juanita Hincapié Restrepo", "Colombia", "Beyond Australasia"],
-  ["Marta Vasić", "Serbia", "Beyond Australasia"],
+/** Names, countries and records as printed in the bid document's advisor pages. */
+const advisors: { name: string; country: string; region: string; affiliation?: string; credits: Credit[] }[] = [
+  {
+    name: "Aayana Rai Bhojani",
+    country: "India",
+    region: "South Asia",
+    credits: [
+      { event: "abp", year: "2023", role: "Deputy Chief Adjudicator" },
+      { event: "wudc", year: "2022", role: "Octofinalist" },
+    ],
+  },
+  {
+    name: "Daniel Victor",
+    country: "Sri Lanka",
+    region: "South Asia",
+    affiliation: "President, Debaters\u2019 Council of Sri Lanka",
+    credits: [
+      { event: "wsdc-asia-pacific", year: "2024", role: "Breaking Adjudicator" },
+    ],
+  },
+  {
+    name: "Sajid Asbat Khandaker",
+    country: "Bangladesh",
+    region: "South Asia",
+    credits: [
+      { event: "wudc", year: "2027", role: "Chief Adjudicator" },
+      { event: "wudc", year: "2022", role: "Champion" },
+    ],
+  },
+  {
+    name: "Srijan Poudel",
+    country: "Nepal",
+    region: "South Asia",
+    credits: [
+      { event: "australs", year: "2022", role: "Deputy Chief Adjudicator" },
+      { event: "uadc", year: "2022", role: "Finalist" },
+    ],
+  },
+  {
+    name: "Bea Legaspi",
+    country: "Philippines",
+    region: "South East Asia",
+    credits: [
+      { event: "australs", year: "2024", role: "Chief Adjudicator" },
+      { event: "australs", year: "2022", role: "Finalist" },
+    ],
+  },
+  {
+    name: "Ian Dylan Chai",
+    country: "Malaysia / Singapore",
+    region: "South East Asia",
+    credits: [
+      { event: "uadc", year: "2025", role: "Champion" },
+      { event: "wudc", year: "2026", role: "Quarter-Finalist" },
+    ],
+  },
+  {
+    name: "Patrick Cheang",
+    country: "Malaysia",
+    region: "South East Asia",
+    credits: [
+      { event: "uadc", year: "2026", role: "4th Best Judge" },
+      { event: "uadc", year: "2021", role: "Champion" },
+    ],
+  },
+  {
+    name: "Tengku Omar",
+    country: "Indonesia",
+    region: "South East Asia",
+    credits: [
+      { event: "australs", year: "2023", role: "Deputy Chief Adjudicator" },
+      { event: "abp", year: "2022", role: "Deputy Chief Adjudicator" },
+    ],
+  },
+  {
+    name: "Vũ Anh Tuấn",
+    country: "Vietnam",
+    region: "South East Asia",
+    credits: [
+      { event: "wsdc", year: "2023", role: "Convenor" },
+      { event: "wudc", year: "2024", role: "Tab Director" },
+    ],
+  },
+  {
+    name: "Donner Tang",
+    country: "Macau",
+    region: "North East Asia",
+    credits: [
+      { event: "neadc", year: "2023", role: "Finalist" },
+      { event: "uadc", year: "2025", role: "Finals Judge" },
+    ],
+  },
+  {
+    name: "Minami Matsushima",
+    country: "Japan",
+    region: "North East Asia",
+    credits: [
+      { event: "australs", year: "2026", role: "Chief Adjudicator" },
+      { event: "australs", year: "2024", role: "Finals Chair" },
+    ],
+  },
+  {
+    name: "Ricky Jin",
+    country: "China",
+    region: "North East Asia",
+    credits: [
+      { event: "uadc", year: "2026", role: "Deputy Chief Adjudicator" },
+      { event: "abp", year: "2023", role: "Finalist" },
+    ],
+  },
+  {
+    name: "Youngwoo Park",
+    country: "South Korea",
+    region: "North East Asia",
+    credits: [
+      { event: "wudc", year: "2027", role: "Deputy Chief Adjudicator" },
+      { event: "australs", year: "2024", role: "Deputy Chief Adjudicator" },
+    ],
+  },
+  {
+    name: "Aisha O'Malley",
+    country: "New Zealand",
+    region: "Oceania",
+    credits: [
+      { event: "australs", year: "2025", role: "Chief Adjudicator" },
+      { event: "nz-3v3", year: "2023", role: "Champion" },
+    ],
+  },
+  {
+    name: "Jordyn Gibson",
+    country: "Australia",
+    region: "Oceania",
+    credits: [
+      { event: "australs", year: "2026", role: "Chief Adjudicator" },
+      { event: "wudc", year: "2026", role: "Quarter-Finalist" },
+    ],
+  },
+  {
+    name: "Kat Cheng",
+    country: "Australia",
+    region: "Oceania",
+    credits: [
+      { event: "wudc", year: "2025", role: "Deputy Chief Adjudicator" },
+      { event: "australs", year: "2022", role: "Deputy Chief Adjudicator" },
+    ],
+  },
+  {
+    name: "Jane Mentzinger",
+    country: "USA",
+    region: "Beyond Australasia",
+    credits: [
+      { event: "wudc", year: "2027", role: "Chief Adjudicator" },
+      { event: "wudc", year: "2025", role: "Deputy Chief Adjudicator" },
+    ],
+  },
+  {
+    name: "Juanita Hincapié Restrepo",
+    country: "Colombia",
+    region: "Beyond Australasia",
+    credits: [
+      { event: "wudc", year: "2025", role: "Chief Adjudicator" },
+      { event: "wudc", year: "2022", role: "Deputy Chief Adjudicator" },
+    ],
+  },
+  {
+    name: "Marta Vasić",
+    country: "Serbia",
+    region: "Beyond Australasia",
+    credits: [
+      { event: "wudc", year: "2026", role: "Chief Adjudicator" },
+      { event: "wudc", year: "2025", role: "Deputy Chief Adjudicator" },
+    ],
+  },
 ];
 
 const slugify = (s: string) =>
@@ -226,18 +415,9 @@ const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-for (const [name, country, region] of advisors) {
-  const slug = slugify(name);
-  people.push({
-    slug,
-    name,
-    group: "advisor",
-    role: "Regional Advisor",
-    country,
-    region,
-    photo: slug,
-    credits: [],
-  });
+for (const a of advisors) {
+  const slug = slugify(a.name);
+  people.push({ ...a, slug, group: "advisor", role: "Regional Advisor", photo: slug });
 }
 
 export const personBySlug = Object.fromEntries(people.map((p) => [p.slug, p]));

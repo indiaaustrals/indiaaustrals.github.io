@@ -12,11 +12,11 @@ export default function People() {
       <PageHead
         kicker="People"
         title="The people"
-        lede="Thirty-one of them, across nine countries. Three chief adjudicators set the motions and the standard. Two people run the tab. Five organise. Twenty-one advisors carry the tournament into their own circuits. Open anyone to read what they have done."
+        lede="Thirty-three of them, across nine countries. Three chief adjudicators set the motions and the standard. Two people run the tab. Seven organise. Twenty-one advisors carry the tournament into their own circuits. Open anyone to read what they have done."
         facts={[
           { k: "Adjudication core", v: "Three" },
           { k: "Tab team", v: "Two" },
-          { k: "Organising committee", v: "Five" },
+          { k: "Organising committee", v: "Seven" },
           { k: "Advisors", v: "Twenty-one, in five regions" },
         ]}
       />

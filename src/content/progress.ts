@@ -7,7 +7,7 @@ export type Group = {
   items: Item[];
 };
 
-export const updated = "18 September 2026";
+export const updated = "10 October 2026";
 
 export const groups: Group[] = [
   {
@@ -22,8 +22,8 @@ export const groups: Group[] = [
         note: "Useful if you have only ever debated British Parliamentary",
       },
       {
-        what: "See all thirty-one people with a photo, and open any of them",
-        note: "Judges and organisers carry their debating record, taken from the tournament's own posters",
+        what: "See all thirty-three people, and open any of them",
+        note: "Judges, organisers and all nineteen regional advisors carry their debating record, taken from the posters and the bid document",
       },
       {
         what: "Read what a regional advisor actually does, and who else covers your region",
@@ -40,14 +40,17 @@ export const groups: Group[] = [
         what: "Understand what hosting an Australs involves, and how the tournament grew since 1975",
       },
       {
-        what: "Picture a day at a tournament this size, while the real timetable is settled",
+        what: "See the fee, everything it covers, and who may enter",
+        note: "USD 630: room at The Grand, airport pick-up and drop, daily buses, five lunches, five dinners, four socials",
       },
+      { what: "Read how the rounds, motions and the break work" },
+      { what: "Read who can apply for a scholarship and what it covers" },
       {
         what: "Find every question we cannot answer yet on the page where you would look for it",
         note: "Marked in place with the name of whoever holds the answer, rather than hidden in a list of questions",
       },
       { what: "Leave a name and an email to be told the day registration opens" },
-      { what: "Find who to ask about what, and who your own regional advisor is" },
+      { what: "Find who to ask about what, and email the tournament at its own address" },
       { what: "Read all of it on a phone, with a keyboard, or with a screen reader" },
       { what: "Follow this page to see exactly where the website stands" },
     ],
@@ -61,24 +64,9 @@ export const groups: Group[] = [
     items: [
       {
         area: "Registration",
-        what: "Confirm 27 June to 4 July 2027 is final, and not moving",
-        owner: "Sayiram",
-      },
-      {
-        area: "Registration",
-        what: "Which countries and regions are eligible",
-        owner: "Sayiram and the adjudication core",
-      },
-      {
-        area: "Registration",
         what: "The cap on teams per university",
+        note: "Depends on how many registrations come in; the constitution is being checked",
         owner: "Sayiram and the adjudication core",
-      },
-      {
-        area: "Registration",
-        what: "Whether a debater signs up for themselves, or their university signs up for its teams",
-        note: "This changes the shape of the registration form, so it is worth settling early",
-        owner: "Org Comm",
       },
       {
         area: "Registration",
@@ -87,48 +75,30 @@ export const groups: Group[] = [
       },
       {
         area: "Money",
-        what: "The entry fee, and exactly what it covers",
-        owner: "Sayiram",
-      },
-      {
-        area: "Money",
-        what: "Whether accommodation at The Grand sits inside the fee or on top of it",
-        owner: "Sayiram",
-      },
-      {
-        area: "Money",
-        what: "How people pay: card, bank transfer or UPI",
+        what: "How people pay, and the payment deadlines",
         note: "This decides which payment company we sign up with",
         owner: "Org Comm",
       },
       {
         area: "Money",
-        what: "The scholarship route: who it is for, and what it covers",
+        what: "Who sits on the Scholarship Board",
         owner: "Org Comm",
       },
       {
         area: "Judging",
-        what: "How many judges a team must bring",
-        owner: "the adjudication core",
-      },
-      {
-        area: "Judging",
-        what: "Whether independent adjudicator applications are capped, and how they are assessed",
+        what: "Confirm the judge rule is N−1",
+        note: "The site says it is expected, not settled",
         owner: "the adjudication core",
       },
       {
         area: "Rounds",
-        what: "How many preliminary rounds, and how many motions go out in advance",
-        owner: "the adjudication core",
-      },
-      {
-        area: "Rounds",
-        what: "The break structure: Open, ESL, EFL, and how many teams in each",
+        what: "How many teams break in Open, ESL and EFL",
         owner: "the adjudication core",
       },
       {
         area: "Rounds",
         what: "The day-by-day running order",
+        note: "Which round falls on which day, socials, bus times",
         owner: "Jemma and Pranjal",
       },
       {
@@ -144,57 +114,43 @@ export const groups: Group[] = [
       {
         area: "Equity",
         what: "The equity policy, written out in full",
+        note: "Published by the equity team with input from the adjudication core and Org Comm",
         owner: "Equity team",
       },
       {
         area: "Equity",
-        what: "The participant handbook, written out",
+        what: "The participant handbook",
         owner: "Org Comm",
       },
       {
         area: "Logistics",
-        what: "How teams get between The Grand and campus each morning, and who pays for it",
-        owner: "Org Comm",
-      },
-      {
-        area: "Logistics",
-        what: "When we can issue visa invitation letters, and what they cover",
+        what: "When we can issue visa invitation letters",
+        note: "Waiting on IIT Delhi to confirm its timelines and co-sign",
         owner: "Org Comm",
       },
       {
         area: "Logistics",
         what: "A room-by-room access survey of the campus and the hotel",
-        note: "So we can say what is step-free instead of assuming",
+        note: "Which rooms are step-free, where the accessible toilets are, the longest walk between rooms, ground-floor hotel rooms",
         owner: "Org Comm",
       },
       {
         area: "Website",
-        what: "The email address the site should send from",
-        note: "Confirmation emails need an address that is ours and that will not land in spam",
-        owner: "Org Comm",
-      },
-      {
-        area: "Website",
-        what: "A web address of our own to put the site on",
-        note: "It sits on a free address today, which works but does not read as ours",
+        what: "A web address of our own",
+        note: "indiaaustrals2027.com, or close to it, is the preference",
         owner: "Sayiram",
       },
       {
         area: "Website",
         what: "How long we keep people's details after the tournament ends",
+        note: "Previous organising committees are being asked what they did",
         owner: "Org Comm",
       },
       {
         area: "People",
-        what: "Surnames for Anjali and Kamal, our two senior advisors",
-        note: "Their posters only carry first names",
-        owner: "Rajat and Krishnatara",
-      },
-      {
-        area: "People",
-        what: "Debating records for the twenty-one advisors",
-        note: "The posters carry their names and countries and nothing else",
-        owner: "Rajat and Krishnatara",
+        what: "Photos of Shivangi Sharma and Garvit Gosain",
+        note: "They are on the site with their initials until then",
+        owner: "Shivangi and Garvit",
       },
     ],
   },

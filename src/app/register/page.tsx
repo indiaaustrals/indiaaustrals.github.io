@@ -20,7 +20,7 @@ const sections = [
 const steps = [
   ["Leave your details", "Name, email, university. That is all we hold until registration opens, and it is all we will ever hold without asking."],
   ["We tell you the day it opens", "In the same message: the fee, what it covers, who may enter and how long you have. You will not have to chase four announcements to work out whether you can come."],
-  ["You register a team, or apply to judge", "One form for teams, a separate one for independent adjudicators. Both ask for the minimum we need and nothing else."],
+  ["Your university registers its teams and judges", "There are no individual registrations. One representative signs up for every team and judge slot the university wants. Invited adjudicators apply separately."],
   ["You pay, and we confirm", "Once payment lands we confirm your place, and only then does your account exist. Confirmation carries your sign-in details."],
   ["Your own page opens", "Every form you still owe us, with its deadline, in one list. No more hunting through five emails and a spreadsheet you cannot open."],
 ];
@@ -34,10 +34,10 @@ export default function Register() {
         lede="When it opens, it opens complete. Fee, eligibility, deadlines and judge requirements go up together, so you can decide in one sitting instead of four. Leave an email and you hear before anyone announces it anywhere else."
         facts={[
           { k: "Status", v: "Not open" },
-          { k: "Opens", v: "Date not set" },
-          { k: "Fee", v: "Not set" },
-          { k: "Who may enter", v: "Not set" },
-          { k: "Judges per team", v: "Not set" },
+          { k: "Opens", v: "To be announced" },
+          { k: "Fee", v: "USD 630 per person" },
+          { k: "Who may enter", v: "Universities in the Asia Pacific" },
+          { k: "Who signs up", v: "Your university" },
         ]}
       />
       <SubNav items={sections} />
@@ -62,15 +62,21 @@ export default function Register() {
       </Band>
 
       <Band id="who" tone="cream">
-        <H2 sub="Australs draws from Australasia and across Asia. Exactly where the line falls for 2027, and how many teams one university may send, is being settled by the organising committee together with the adjudication core.">
+        <H2 sub="Every university in the Asia Pacific may register. Historically that has meant Australia, New Zealand and the rest of Asia.">
           Eligibility
         </H2>
         <div className="mt-7 grid gap-8 lg:grid-cols-2">
           <Prose>
             <p>
-              What we can say now: it is a university tournament, debated in teams of three, and
-              institutions send teams rather than individuals turning up alone. You do not need to
-              have debated Australs before, and there is no qualification tournament to get through.
+              It is a university tournament, debated in teams of three. A representative of each
+              university signs up for its team and judge slots; there are no individual
+              registrations. You do not need to have debated Australs before, and there is no
+              qualification tournament to get through.
+            </p>
+            <p>
+              Institutions from the Middle East and Central Asia often compete at the European
+              championship because it is closer. If yours would rather come to Delhi, register: we
+              look at entries from those regions one by one.
             </p>
             <p>
               If you are unsure whether your circuit is in scope, ask your{" "}
@@ -79,15 +85,10 @@ export default function Register() {
           </Prose>
           <div className="space-y-3">
             <Pending who="Sayiram and the adjudication core">
-              Which countries and regions are eligible.
+              The cap on teams per university. It depends on how many registrations come in, and
+              the constitution is being checked.
             </Pending>
-            <Pending who="Sayiram and the adjudication core">
-              The cap on teams per university.
-            </Pending>
-            <Pending who="Org Comm">
-              Whether a debater signs up for themselves, or their university signs up for its teams.
-              This one changes the shape of the form, so it comes first.
-            </Pending>
+            <Pending who="Org Comm">The day registration opens and the day it closes.</Pending>
           </div>
         </div>
       </Band>
@@ -95,35 +96,32 @@ export default function Register() {
       <Band id="money">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <H2 sub="Nothing here is decided, and we are not going to float a number we might have to raise.">
+            <H2 sub="USD 630 per person, and here is exactly what it buys.">
               Fees and scholarships
             </H2>
             <Prose className="mt-6">
+              <p>The registration fee is <strong>USD 630</strong>. It covers:</p>
+              <ul className="list-disc space-y-1 pl-5">
+                <li>Your room at The Grand New Delhi for the whole tournament</li>
+                <li>Pick-up from and drop to the airport</li>
+                <li>Buses between The Grand and IIT Delhi every morning and evening</li>
+                <li>Five lunches and five dinners</li>
+                <li>Entry to all four socials</li>
+              </ul>
               <p>
-                The fee will arrive with a line-by-line list of what it covers: accommodation,
-                meals, socials, transport between the hotel and campus. You should not have to
-                write to us to find out what you paid for.
-              </p>
-              <p>
-                There will be a <strong>scholarship route</strong>. Australs is expensive to reach
-                from most of the region, and a tournament that only hears from the institutions who
-                can afford it is a worse tournament. Who it is open to and how much it covers is
-                still being worked out.
+                There is a <strong>scholarship</strong>, and anyone planning to attend may apply.
+                It can waive part or all of the registration fee and contribute to travel.
+                Allocations are made by a Scholarship Board, which will be set up and announced
+                shortly.
               </p>
             </Prose>
           </div>
           <div className="space-y-3 self-center">
-            <Pending who="Sayiram">The entry fee, and exactly what it covers.</Pending>
-            <Pending who="Sayiram">
-              Whether accommodation at The Grand is inside the fee or charged on top.
-            </Pending>
             <Pending who="Org Comm">
-              How people pay: card, bank transfer or UPI. This decides which payment company we
-              sign up with.
+              How people pay, and the payment deadlines. These come out with the registration
+              dates.
             </Pending>
-            <Pending who="Org Comm">
-              The scholarship route: who it is for, and what it covers.
-            </Pending>
+            <Pending who="Org Comm">Who sits on the Scholarship Board.</Pending>
           </div>
         </div>
       </Band>
@@ -134,14 +132,15 @@ export default function Register() {
             <H2 sub="Australs runs on the judges teams bring with them.">Judges</H2>
             <Prose className="mt-6">
               <p>
-                Tournaments in this format normally ask each team, or each pair of teams, to bring an
-                adjudicator. Pranav Kagalkar, Ally Pitt and Sunghyun Park set that requirement
-                for 2027, and they have not fixed it yet.
+                Universities bring judges alongside their teams. The rule is expected to be{" "}
+                <strong>N&minus;1</strong>: one judge for every team after the first. Pranav
+                Kagalkar, Ally Pitt and Sunghyun Park are confirming it.
               </p>
               <p>
-                You can also come as an <strong>independent adjudicator</strong>, with no team
-                attached. That application opens alongside team registration and is judged on its
-                own merits, not on whether your institution is sending debaters.
+                You can also come as an <strong>invited adjudicator</strong>, with no team attached.
+                Applications go out soon and anyone, from anywhere in the world, may apply. The
+                adjudication core alone assesses them, and decides how much subsidy each selected
+                adjudicator receives.
               </p>
               <p>
                 Judge briefings, the adjudication guide and feedback expectations will all be
@@ -150,9 +149,8 @@ export default function Register() {
             </Prose>
           </div>
           <div className="space-y-3 self-center">
-            <Pending who="the adjudication core">How many judges a team must bring.</Pending>
             <Pending who="the adjudication core">
-              Whether independent adjudicator applications are capped, and how they are assessed.
+              Confirming the judge rule is N&minus;1.
             </Pending>
           </div>
         </div>
@@ -167,14 +165,16 @@ export default function Register() {
             <Prose className="mt-6 text-cream/88">
               <p>
                 There will be an equity team with its own confidential contact, independent of the
-                organising committee and the adjudication core. Anything raised with them stays with
-                them unless you agree otherwise.
+                organising committee and the adjudication core. The team is announced closer to the
+                championship.
               </p>
               <p>
-                Before registration opens we will publish the equity policy: what counts, how to
-                raise something, who reads it, what happens next, and what the tournament can and
-                cannot do. You should be able to read that and decide whether you trust it
-                <em> before</em> you buy a flight, not after something goes wrong.
+                Once chosen, the equity team publishes the equity policy, with input from the
+                adjudication core and the organising committee: what counts, how to raise
+                something, who reads it and what happens next.
+              </p>
+              <p>
+                The organising committee releases a participant handbook closer to the dates.
               </p>
               <p>
                 Dietary, accessibility and accommodation needs are asked for on a form once your
@@ -188,6 +188,7 @@ export default function Register() {
               Who sits on the equity team, and the confidential address to reach them.
             </Pending>
             <Pending who="the Equity team">The equity policy, written out in full.</Pending>
+            <Pending who="Org Comm">The participant handbook.</Pending>
           </div>
         </div>
       </Band>

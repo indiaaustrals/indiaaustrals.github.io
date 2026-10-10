@@ -23,8 +23,8 @@ lists you can change without touching a page:
 | File | Holds |
 | --- | --- |
 | `site.ts` | Dates, venue, hotel, the menu, the sign-up form's address |
-| `people.ts` | All 31 people and every credit they hold |
-| `events.ts` | The 19 tournaments those credits point at |
+| `people.ts` | All 33 people and every credit they hold |
+| `events.ts` | The 22 tournaments those credits point at |
 | `progress.ts` | The build log that fills the `/progress` page |
 | `map.ts` | The 18 countries on the route map |
 

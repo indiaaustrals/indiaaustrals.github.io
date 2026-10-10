@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { PageHead, Band, H2, Prose, Pending } from "@/components/Shell";
+import { PageHead, Band, H2, Prose } from "@/components/Shell";
 import { people, regions } from "@/content/people";
+import { contactEmail } from "@/content/site";
 
 export const metadata = { title: "Contact" };
 
@@ -30,6 +31,7 @@ export default function Contact() {
         title="Contact"
         lede="Most of what lands in our inbox is already answered on the page it belongs to. If yours is not, these are the people holding the answer. Your own regional advisor is usually the fastest way in."
         facts={[
+          { k: "Email", v: contactEmail, href: `mailto:${contactEmail}` },
           { k: "Logistics", v: "Organising committee" },
           { k: "Judging and format", v: "Adjudication core" },
           { k: "Draw and clashes", v: "Tab team" },
@@ -60,12 +62,12 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className="mt-8 max-w-[68ch]">
-          <Pending who="Org Comm">
-            A tournament email address of our own. We have not published one because we want one
-            that is ours and that will not put your message in a spam folder.
-          </Pending>
-        </div>
+        <p className="mt-8 max-w-[68ch] text-[15px] leading-[1.7] text-ink/85">
+          Everything reaches all three through one address:{" "}
+          <a href={`mailto:${contactEmail}`} className="border-b border-navy/40 text-navy hover:border-navy">
+            {contactEmail}
+          </a>
+        </p>
       </Band>
 
       <Band tone="navy">

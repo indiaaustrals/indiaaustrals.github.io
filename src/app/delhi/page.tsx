@@ -90,15 +90,12 @@ export default function Delhi() {
                 either side of the tournament can be added are all things we will ask you about on a
                 form once your registration is confirmed.
               </p>
+              <p>
+                Your room is part of the USD 630 registration fee. So are the buses that run between
+                The Grand and IIT Delhi every morning and every evening, and your pick-up from and
+                drop to the airport. None of it costs extra.
+              </p>
             </Prose>
-            <div className="mt-6 max-w-[62ch] space-y-3">
-              <Pending who="Sayiram">
-                Whether accommodation is inside the entry fee or charged on top of it.
-              </Pending>
-              <Pending who="Org Comm">
-                How you get between the hotel and campus each morning, and who pays for it.
-              </Pending>
-            </div>
           </div>
         </div>
       </Band>
@@ -193,8 +190,10 @@ export default function Delhi() {
             </Prose>
             <div className="mt-6 max-w-[62ch]">
               <Pending who="Org Comm">
-                When we can issue invitation letters, and what they will cover. If your visa needs
-                one, say so at registration and we will prioritise it.
+                When invitation letters can be issued. We are waiting on IIT Delhi to confirm its
+                timelines, and want someone from the institute to co-sign so the letter carries
+                weight. It will cover the championship and your accommodation for its dates. If your
+                visa needs one, say so at registration and we will prioritise it.
               </Pending>
             </div>
           </div>

@@ -164,18 +164,23 @@ export default function Tournament() {
       <Band id="rounds">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <H2 sub="The adjudication core and the tab team set the shape of the week. They have not set it yet.">
+            <H2 sub="Eight preliminary rounds, then out-rounds for the teams that break. No motion goes out in advance.">
               Rounds and the break
             </H2>
             <Prose className="mt-6">
               <p>
-                An Australs normally runs eight or nine preliminary rounds across the week, then
-                out-rounds for the teams that break. Tournaments this size usually run an Open
-                break alongside ESL and EFL, so teams debating in a second or foreign language get
-                ranked against each other as well as against the field.
+                There are <strong>eight preliminary rounds</strong>. Every motion is announced
+                thirty minutes before its round: five minutes to choose the motion, twenty-five to
+                prepare. Nothing is released in advance.
               </p>
               <p>
-                None of that holds for 2027 yet. The moment it does, it goes on the{" "}
+                There will be an <strong>Open break</strong>. ESL and EFL breaks are announced as
+                well, provided enough teams hold each language status to meet the constitution&apos;s
+                minimum. A Language Team decides statuses, and applications for a language category
+                open closer to the championship.
+              </p>
+              <p>
+                When the day-by-day running order is set it goes on the{" "}
                 <Link href="/schedule/">schedule</Link>, and every registered team gets it by email
                 that day.
               </p>
@@ -183,10 +188,7 @@ export default function Tournament() {
           </div>
           <div className="space-y-3 self-center">
             <Pending who="the adjudication core">
-              How many preliminary rounds, and how many motions are released in advance.
-            </Pending>
-            <Pending who="the adjudication core">
-              The break structure: Open, ESL, EFL, and how many teams in each.
+              How many teams break in each category.
             </Pending>
             <Pending who="Jemma and Pranjal">The day-by-day running order.</Pending>
             <Pending who="Jemma">
@@ -197,7 +199,7 @@ export default function Tournament() {
       </Band>
 
       <Band id="reach" tone="navy">
-        <H2 sub="Twenty-one advisors, eighteen countries, five regions. These are the places this tournament has people. Eligibility is a separate question, and the organising committee is still settling it.">
+        <H2 sub="Twenty-one advisors, eighteen countries, five regions. These are the places this tournament has people. Eligibility is wider: any university in the Asia Pacific may register.">
           The network
         </H2>
         <div className="mt-8 min-w-0">
@@ -222,7 +224,7 @@ export default function Tournament() {
               </p>
             </Prose>
             <Link href="/people/" className="mt-6 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy">
-              All thirty-one people
+              All thirty-three people
             </Link>
           </div>
           <ul className="border-t border-ink/15 self-start">

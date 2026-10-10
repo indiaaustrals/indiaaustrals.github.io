@@ -1,8 +1,8 @@
 /**
  * The tournaments this team has between them judged, chaired, run or won.
  * Every entry comes from the credits on the tournament's own announcement
- * posters. Nothing is inferred, and acronyms are only expanded where the
- * expansion is certain.
+ * posters and the advisor pages of the bid document. Nothing is inferred,
+ * and acronyms are only expanded where the expansion is certain.
  */
 export type Event = {
   slug: string;
@@ -60,6 +60,19 @@ export const events: Event[] = [
     kind: "regional",
     blurb: "The Australasian women's and gender minorities championship, hosted by UNSW.",
   },
+  {
+    slug: "wsdc",
+    name: "WSDC",
+    full: "World Schools Debating Championship",
+    kind: "international",
+    blurb: "The world championship for school students, debated by national teams.",
+  },
+  {
+    slug: "wsdc-asia-pacific",
+    name: "Asia Pacific WSDC",
+    kind: "regional",
+  },
+  { slug: "nz-3v3", name: "New Zealand 3v3", kind: "domestic" },
   { slug: "nalsar", name: "NALSAR", kind: "domestic" },
   { slug: "cupd", name: "CUPD", kind: "domestic" },
   { slug: "delhi-debate-open", name: "Delhi Debate Open", kind: "domestic" },

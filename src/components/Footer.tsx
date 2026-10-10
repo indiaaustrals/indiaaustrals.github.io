@@ -56,7 +56,9 @@ export default function Footer() {
           </p>
           <p className="datum text-cream/72">Updated {site.buildUpdated}</p>
         </div>
-        <p className="mt-4 text-center text-[12px] text-cream/60">Website created by Mahor Nagda</p>
+        <p className="mt-6 text-center text-[15px] text-cream/85">
+          Website created by <span className="text-gold">Mahor Nagda</span>
+        </p>
       </div>
     </footer>
   );

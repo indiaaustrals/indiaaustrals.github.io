@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PageHead, Band, SubNav, H2, Prose, Pending } from "@/components/Shell";
+import { PageHead, Band, SubNav, H2, Prose } from "@/components/Shell";
 import RouteMap from "@/components/RouteMap";
 import { asset } from "@/lib/asset";
 import { site } from "@/content/site";
@@ -162,7 +162,7 @@ export default function Tournament() {
       </Band>
 
       <Band id="rounds">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="max-w-[68ch]">
           <div>
             <H2 sub="Eight preliminary rounds, then out-rounds for the teams that break. No motion goes out in advance.">
               Rounds and the break
@@ -180,20 +180,10 @@ export default function Tournament() {
                 open closer to the championship.
               </p>
               <p>
-                When the day-by-day running order is set it goes on the{" "}
-                <Link href="/schedule/">schedule</Link>, and every registered team gets it by email
-                that day.
+                The day-by-day schedule will be announced closer to the tournament, on the{" "}
+                <Link href="/schedule/">schedule</Link> page.
               </p>
             </Prose>
-          </div>
-          <div className="space-y-3 self-center">
-            <Pending who="the adjudication core">
-              How many teams break in each category.
-            </Pending>
-            <Pending who="Jemma and Pranjal">The day-by-day running order.</Pending>
-            <Pending who="Jemma">
-              Whether the existing tab software stays, or is wired into this site.
-            </Pending>
           </div>
         </div>
       </Band>

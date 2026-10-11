@@ -7,7 +7,7 @@ export type Group = {
   items: Item[];
 };
 
-export const updated = "10 October 2026";
+export const updated = "11 October 2026";
 
 export const groups: Group[] = [
   {
@@ -63,50 +63,6 @@ export const groups: Group[] = [
       "Each of these is a blank on the site right now. The page is already built and needs the answer typed in. The name beside it belongs to whoever has it.",
     items: [
       {
-        area: "Registration",
-        what: "The cap on teams per university",
-        note: "Depends on how many registrations come in; the constitution is being checked",
-        owner: "Sayiram and the adjudication core",
-      },
-      {
-        area: "Registration",
-        what: "The day registration opens and the day it closes",
-        owner: "Org Comm",
-      },
-      {
-        area: "Money",
-        what: "How people pay, and the payment deadlines",
-        note: "This decides which payment company we sign up with",
-        owner: "Org Comm",
-      },
-      {
-        area: "Money",
-        what: "Who sits on the Scholarship Board",
-        owner: "Org Comm",
-      },
-      {
-        area: "Judging",
-        what: "Confirm the judge rule is N−1",
-        note: "The site says it is expected, not settled",
-        owner: "the adjudication core",
-      },
-      {
-        area: "Rounds",
-        what: "How many teams break in Open, ESL and EFL",
-        owner: "the adjudication core",
-      },
-      {
-        area: "Rounds",
-        what: "The day-by-day running order",
-        note: "Which round falls on which day, socials, bus times",
-        owner: "Jemma and Pranjal",
-      },
-      {
-        area: "Rounds",
-        what: "Whether the existing tab software stays, or is wired into this site",
-        owner: "Jemma",
-      },
-      {
         area: "Equity",
         what: "Who sits on the equity team, and the confidential address to reach them",
         owner: "Equity team",
@@ -116,35 +72,6 @@ export const groups: Group[] = [
         what: "The equity policy, written out in full",
         note: "Published by the equity team with input from the adjudication core and Org Comm",
         owner: "Equity team",
-      },
-      {
-        area: "Equity",
-        what: "The participant handbook",
-        owner: "Org Comm",
-      },
-      {
-        area: "Logistics",
-        what: "When we can issue visa invitation letters",
-        note: "Waiting on IIT Delhi to confirm its timelines and co-sign",
-        owner: "Org Comm",
-      },
-      {
-        area: "Logistics",
-        what: "A room-by-room access survey of the campus and the hotel",
-        note: "Which rooms are step-free, where the accessible toilets are, the longest walk between rooms, ground-floor hotel rooms",
-        owner: "Org Comm",
-      },
-      {
-        area: "Website",
-        what: "A web address of our own",
-        note: "indiaaustrals2027.com, or close to it, is the preference",
-        owner: "Sayiram",
-      },
-      {
-        area: "Website",
-        what: "How long we keep people's details after the tournament ends",
-        note: "Previous organising committees are being asked what they did",
-        owner: "Org Comm",
       },
       {
         area: "People",
@@ -170,6 +97,7 @@ export const groups: Group[] = [
       { what: "Letting the organising committee pull the numbers out into a spreadsheet" },
       { what: "Checking people in on the day with a QR code" },
       { what: "Certificates after the tournament" },
+      { what: "Showing the live tab, draws and results on this site" },
     ],
   },
 ];

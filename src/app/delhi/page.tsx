@@ -1,6 +1,5 @@
-import Image from "next/image";
-import { PageHead, Band, SubNav, H2, Prose, Pending } from "@/components/Shell";
-import { asset } from "@/lib/asset";
+import { PageHead, Band, SubNav, H2, Prose } from "@/components/Shell";
+import Carousel from "@/components/Carousel";
 import { site } from "@/content/site";
 
 export const metadata = {
@@ -62,18 +61,33 @@ export default function Delhi() {
               </p>
             </Prose>
           </div>
-          <div className="grid grid-cols-2 gap-3">
-            <Image src={asset("/img/cards/venue-iitd.webp")} alt="The auditorium, a lecture theatre and the main building at IIT Delhi" width={760} height={950} className="box w-full p-1" unoptimized />
-            <Image src={asset("/img/cards/venue-debsoc.webp")} alt="Members of the IIT Delhi Debating Society" width={760} height={950} className="box mt-8 w-full p-1" unoptimized />
+          <div className="self-center">
+            <Carousel
+              label="Photos of IIT Delhi and its debating society"
+              slides={[
+                { src: "/img/photos/iitd-main-building.webp", alt: "The main building at IIT Delhi" },
+                { src: "/img/photos/iitd-auditorium.webp", alt: "The auditorium at IIT Delhi" },
+                { src: "/img/photos/iitd-lecture-hall.webp", alt: "A lecture theatre at IIT Delhi" },
+                { src: "/img/photos/debsoc-1.webp", alt: "Members of the IIT Delhi Debating Society on stage" },
+                { src: "/img/photos/debsoc-2.webp", alt: "Members of the IIT Delhi Debating Society in a lecture theatre" },
+              ]}
+            />
           </div>
         </div>
       </Band>
 
       <Band id="stay" tone="cream">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-          <div className="order-2 grid grid-cols-2 gap-3 lg:order-1">
-            <Image src={asset("/img/cards/acco-grand.webp")} alt="The Grand New Delhi, exterior and atrium" width={760} height={950} className="box mt-8 w-full p-1" unoptimized />
-            <Image src={asset("/img/cards/acco-rooms.webp")} alt="A twin room and the pool at The Grand New Delhi" width={760} height={950} className="box w-full p-1" unoptimized />
+          <div className="order-2 self-center lg:order-1">
+            <Carousel
+              label="Photos of The Grand New Delhi"
+              slides={[
+                { src: "/img/photos/grand-exterior.webp", alt: "The Grand New Delhi from outside" },
+                { src: "/img/photos/grand-twin-room.webp", alt: "A twin room at The Grand New Delhi" },
+                { src: "/img/photos/grand-atrium.webp", alt: "The atrium restaurant at The Grand New Delhi" },
+                { src: "/img/photos/grand-pool.webp", alt: "The pool at The Grand New Delhi" },
+              ]}
+            />
           </div>
           <div className="order-1 lg:order-2">
             <H2 sub="The Grand New Delhi, in Vasant Kunj. Twin rooms, a pool, and breakfast in the atrium before the draw goes up.">
@@ -188,14 +202,6 @@ export default function Delhi() {
                 normally wants an invitation letter from the host.
               </p>
             </Prose>
-            <div className="mt-6 max-w-[62ch]">
-              <Pending who="Org Comm">
-                When invitation letters can be issued. We are waiting on IIT Delhi to confirm its
-                timelines, and want someone from the institute to co-sign so the letter carries
-                weight. It will cover the championship and your accommodation for its dates. If your
-                visa needs one, say so at registration and we will prioritise it.
-              </Pending>
-            </div>
           </div>
         </div>
       </Band>
@@ -233,17 +239,7 @@ export default function Delhi() {
             end to end with a wheelchair, a mobility aid or a support worker in mind, and until that
             is done we are not going to describe either as step-free.
           </p>
-          <p>
-            What we will publish, before registration opens: which debating rooms are reachable
-            without stairs, where the accessible toilets are, how far the longest walk between rooms
-            actually is, and what the hotel can do about ground-floor rooms.
-          </p>
         </Prose>
-        <div className="mt-6 max-w-[62ch]">
-          <Pending who="Org Comm">
-            A room-by-room access survey of the campus and the hotel.
-          </Pending>
-        </div>
       </Band>
     </>
   );

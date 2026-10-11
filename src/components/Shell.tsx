@@ -18,7 +18,7 @@ export function PageHead({
     <div className="relative isolate border-b border-ink/15">
       <div className="grain pointer-events-none absolute inset-0 -z-10" />
       <div className="mx-auto max-w-[1180px] px-4 pt-7">
-        <Rail left={kicker} />
+        <Rail />
         <div className="mt-6 grid gap-x-12 gap-y-6 pb-8 lg:grid-cols-[1.15fr_1fr]">
           <div>
             <h1 className="text-[clamp(2.3rem,5.2vw,3.6rem)] text-ink">{title}</h1>

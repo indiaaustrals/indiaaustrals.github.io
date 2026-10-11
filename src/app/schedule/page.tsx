@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageHead, Band, H2, Prose, Pending } from "@/components/Shell";
+import { PageHead, Band, H2, Prose } from "@/components/Shell";
 import { site } from "@/content/site";
 
 export const metadata = { title: "Schedule" };
@@ -59,14 +59,13 @@ export default function Schedule() {
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div>
-            <H2 sub="The moment the tab team fixes the running order, all of this lands here. Once sign-in exists it also lands on a page of your own, carrying only your rounds.">
+            <H2 sub="The day-by-day schedule will be announced closer to the dates of the tournament.">
               Still to come
             </H2>
             <Prose className="mt-6">
               <p>
-                We would rather show you eight empty days with a date on each than invent a timetable
-                you might book flights around. If you need to know whether to fly out on the 4th or
-                the 5th, the answer today is that we do not know either.
+                Which round falls on which day, the socials and the bus times will all be published
+                here once they are set.
               </p>
             </Prose>
             <Link href="/progress/" className="mt-5 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy">
@@ -83,11 +82,6 @@ export default function Schedule() {
           </ul>
         </div>
 
-        <div className="mt-10 max-w-[64ch]">
-          <Pending who="Jemma and Pranjal">
-            The day-by-day running order.
-          </Pending>
-        </div>
       </Band>
     </>
   );

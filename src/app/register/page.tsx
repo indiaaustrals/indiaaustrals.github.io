@@ -38,6 +38,7 @@ export default function Register() {
           { k: "Fee", v: "USD 630 per person" },
           { k: "Who may enter", v: "Universities in the Asia Pacific" },
           { k: "Who signs up", v: "Your university" },
+          { k: "Teams per university", v: "No cap" },
         ]}
       />
       <SubNav items={sections} />
@@ -65,7 +66,7 @@ export default function Register() {
         <H2 sub="Every university in the Asia Pacific may register. Historically that has meant Australia, New Zealand and the rest of Asia.">
           Eligibility
         </H2>
-        <div className="mt-7 grid gap-8 lg:grid-cols-2">
+        <div className="mt-7 max-w-[68ch]">
           <Prose>
             <p>
               It is a university tournament, debated in teams of three. A representative of each
@@ -79,22 +80,18 @@ export default function Register() {
               look at entries from those regions one by one.
             </p>
             <p>
+              There is <strong>no cap</strong> on the number of teams a university can enter.
+            </p>
+            <p>
               If you are unsure whether your circuit is in scope, ask your{" "}
               <Link href="/people/">regional advisor</Link>. They will know before we publish it.
             </p>
           </Prose>
-          <div className="space-y-3">
-            <Pending who="Sayiram and the adjudication core">
-              The cap on teams per university. It depends on how many registrations come in, and
-              the constitution is being checked.
-            </Pending>
-            <Pending who="Org Comm">The day registration opens and the day it closes.</Pending>
-          </div>
         </div>
       </Band>
 
       <Band id="money">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="max-w-[68ch]">
           <div>
             <H2 sub="USD 630 per person, and here is exactly what it buys.">
               Fees and scholarships
@@ -116,25 +113,17 @@ export default function Register() {
               </p>
             </Prose>
           </div>
-          <div className="space-y-3 self-center">
-            <Pending who="Org Comm">
-              How people pay, and the payment deadlines. These come out with the registration
-              dates.
-            </Pending>
-            <Pending who="Org Comm">Who sits on the Scholarship Board.</Pending>
-          </div>
         </div>
       </Band>
 
       <Band id="judges" tone="cream">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="max-w-[68ch]">
           <div>
             <H2 sub="Australs runs on the judges teams bring with them.">Judges</H2>
             <Prose className="mt-6">
               <p>
-                Universities bring judges alongside their teams. The rule is expected to be{" "}
-                <strong>N&minus;1</strong>: one judge for every team after the first. Pranav
-                Kagalkar, Ally Pitt and Sunghyun Park are confirming it.
+                Universities bring judges alongside their teams. The rule is{" "}
+                <strong>N&minus;1</strong>: one judge for every team after the first.
               </p>
               <p>
                 You can also come as an <strong>invited adjudicator</strong>, with no team attached.
@@ -147,11 +136,6 @@ export default function Register() {
                 published on the <Link href="/resources/">prep page</Link> before the tournament.
               </p>
             </Prose>
-          </div>
-          <div className="space-y-3 self-center">
-            <Pending who="the adjudication core">
-              Confirming the judge rule is N&minus;1.
-            </Pending>
           </div>
         </div>
       </Band>
@@ -174,9 +158,6 @@ export default function Register() {
                 something, who reads it and what happens next.
               </p>
               <p>
-                The organising committee releases a participant handbook closer to the dates.
-              </p>
-              <p>
                 Dietary, accessibility and accommodation needs are asked for on a form once your
                 registration is confirmed, and they go to the organising committee rather than the
                 equity team.
@@ -188,7 +169,6 @@ export default function Register() {
               Who sits on the equity team, and the confidential address to reach them.
             </Pending>
             <Pending who="the Equity team">The equity policy, written out in full.</Pending>
-            <Pending who="Org Comm">The participant handbook.</Pending>
           </div>
         </div>
       </Band>

@@ -31,7 +31,7 @@ export default function Tournament() {
           { k: "Venue", v: `${site.venue}, ${site.city}`, href: "/delhi/#venue" },
           { k: "Format", v: "Australasian, three a side" },
           { k: "Speech length", v: "8 minutes, 4-minute reply" },
-          { k: "Rounds", v: "Not set", href: "/progress/" },
+          { k: "Preliminary rounds", v: "Eight" },
           { k: "Adjudication core", v: caps.map((c) => c.name).join(", "), href: "/people/?group=cap" },
         ]}
       />

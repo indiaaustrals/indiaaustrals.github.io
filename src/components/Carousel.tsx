@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { asset } from "@/lib/asset";
 
-export type Slide = { src: string; alt: string };
+export type Slide = { src: string; alt: string; credit?: string; creditUrl?: string };
 
 export default function Carousel({ slides, label }: { slides: Slide[]; label: string }) {
   const track = useRef<HTMLDivElement>(null);
@@ -59,7 +59,17 @@ export default function Carousel({ slides, label }: { slides: Slide[]; label: st
           </button>
         ))}
       </div>
-      <div className="flex justify-center gap-2 py-2.5">
+      <p className="min-h-[1.25rem] px-2 pt-1.5 text-center text-[11.5px] text-ink/60">
+        {slides[at]?.credit &&
+          (slides[at].creditUrl ? (
+            <a href={slides[at].creditUrl} className="underline decoration-ink/25 underline-offset-2 hover:text-navy" target="_blank" rel="noopener noreferrer">
+              Photo: {slides[at].credit}
+            </a>
+          ) : (
+            <>Photo: {slides[at].credit}</>
+          ))}
+      </p>
+      <div className="flex justify-center gap-2 pb-2.5 pt-1">
         {slides.map((s, i) => (
           <button
             key={s.src}

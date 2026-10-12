@@ -65,9 +65,11 @@ export default function Delhi() {
             <Carousel
               label="Photos of IIT Delhi and its debating society"
               slides={[
-                { src: "/img/photos/iitd-main-building.webp", alt: "The main building at IIT Delhi" },
+                { src: "/img/photos/iitd-main-building-2.webp", alt: "The main building at IIT Delhi", credit: "Azanti, CC BY-SA 4.0", creditUrl: "https://commons.wikimedia.org/wiki/File:Indian_Institute_of_Technology_Delhi.jpg" },
+                { src: "/img/photos/iitd-front.webp", alt: "The front of the main building at IIT Delhi, with its name in Hindi and English", credit: "Manishontop02, CC BY-SA 4.0", creditUrl: "https://commons.wikimedia.org/wiki/File:Iit_Delhi_main_photo_location.jpg" },
                 { src: "/img/photos/iitd-auditorium.webp", alt: "The auditorium at IIT Delhi" },
                 { src: "/img/photos/iitd-lecture-hall.webp", alt: "A lecture theatre at IIT Delhi" },
+                { src: "/img/photos/iitd-night.webp", alt: "The main building at IIT Delhi lit up at night", credit: "Codenamebazinga, CC BY-SA 4.0", creditUrl: "https://commons.wikimedia.org/wiki/File:IIT_Delhi_at_Night.jpg" },
                 { src: "/img/photos/debsoc-1.webp", alt: "Members of the IIT Delhi Debating Society on stage" },
                 { src: "/img/photos/debsoc-2.webp", alt: "Members of the IIT Delhi Debating Society in a lecture theatre" },
               ]}
@@ -82,10 +84,12 @@ export default function Delhi() {
             <Carousel
               label="Photos of The Grand New Delhi"
               slides={[
-                { src: "/img/photos/grand-exterior.webp", alt: "The Grand New Delhi from outside" },
-                { src: "/img/photos/grand-twin-room.webp", alt: "A twin room at The Grand New Delhi" },
-                { src: "/img/photos/grand-atrium.webp", alt: "The atrium restaurant at The Grand New Delhi" },
-                { src: "/img/photos/grand-pool.webp", alt: "The pool at The Grand New Delhi" },
+                { src: "/img/photos/grand-exterior-pool.webp", alt: "The Grand New Delhi seen across the pool and gardens", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
+                { src: "/img/photos/grand-lobby.webp", alt: "The lobby at The Grand New Delhi", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
+                { src: "/img/photos/grand-atrium-2.webp", alt: "The atrium restaurant at The Grand New Delhi, looking out to the garden", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
+                { src: "/img/photos/grand-twin-room.webp", alt: "A twin room at The Grand New Delhi", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
+                { src: "/img/photos/grand-pool-2.webp", alt: "The pool at The Grand New Delhi from above", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
+                { src: "/img/photos/grand-aerial.webp", alt: "The Grand New Delhi and the green around it in Vasant Kunj, from the air", credit: "The Grand New Delhi", creditUrl: "https://www.thegrandnewdelhi.com/" },
               ]}
             />
           </div>

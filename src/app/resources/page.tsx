@@ -7,7 +7,7 @@ const planned = [
   ["Participant handbook", "The format, the rules, the schedule, the venue, and what to do if something goes wrong. One document instead of six announcements.", "Organising committee"],
   ["Equity policy", "What counts as an equity issue, how to raise one, who reads it, and what happens next.", "Equity team"],
   ["Adjudication guide", "How this tournament expects judges to weigh arguments, give feedback and fill a ballot.", "Adjudication core"],
-  ["Motions and prep", "Past Australs motions, the prepared-motion release, and reading for the rounds announced early.", "Adjudication core"],
+  ["Motions and prep", "Past Australs motions, and general reading to prepare for the rounds.", "Adjudication core"],
   ["Briefing videos", "Short recordings from the chief adjudicators, for teams new to the Australasian format.", "Adjudication core"],
   ["Travel and visa notes", "What a visa takes from each country, getting in from the airport, and what to pack for Delhi in June.", "Organising committee"],
 ];

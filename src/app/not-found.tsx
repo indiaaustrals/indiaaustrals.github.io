@@ -17,7 +17,7 @@ export default function NotFound() {
       <PageHead
         kicker="Not found"
         title="Nothing at this address"
-        lede="The page has either moved or was never here. Everything the site holds is one of these."
+        lede="This page has moved or never existed. Try one of these instead."
       />
       <Band>
         <ul className="grid gap-x-10 border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3">

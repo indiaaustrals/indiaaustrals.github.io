@@ -25,7 +25,7 @@ export default function Tournament() {
       <PageHead
         kicker="The tournament"
         title="The tournament"
-        lede="Australs has run every year since 1975, moving between the universities of Australasia and Asia. In 2027 it lands in New Delhi. Fifty-two editions, and none of them here."
+        lede="Australs has run every year since 1975, hosted by universities across Australasia and Asia. In 2027 it comes to New Delhi, the first time India has hosted it."
         facts={[
           { k: "Dates", v: site.datesLabel },
           { k: "Venue", v: `${site.venue}, ${site.city}`, href: "/delhi/#venue" },
@@ -40,26 +40,24 @@ export default function Tournament() {
       <Band id="what">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <H2 sub="The oldest and largest university debating championship outside Europe and North America.">
+            <H2 sub="The university debating championship of Australasia and Asia, held every year since 1975.">
               Australs
             </H2>
             <Prose className="mt-6">
               <p>
-                The Australasian Intervarsity Debating Championship began in 1975 and has been held
-                every year since, hosted by a different university each time. Teams of three come
-                from across Australasia, South Asia and East Asia, debate a week of prepared and
-                impromptu motions, and the field narrows through out-rounds to a grand final.
+                Teams of three come from across Australasia, South Asia and East Asia. They debate
+                eight preliminary rounds over a week, and the best teams go through knockout rounds
+                to a grand final.
               </p>
               <p>
-                It has been to Sydney, Manila, Kuala Lumpur, Auckland, Kathmandu and Kuantan. It has
-                never been to India. The <strong>Indian Debating League</strong> and the{" "}
-                <strong>IIT Delhi Debating Society</strong> are bringing it here, with an
-                adjudication core comes from three of the regions the tournament serves: India,
-                Australia and South Korea.
+                It has been to Sydney, Manila, Kuala Lumpur, Auckland, Kathmandu and Kuantan, but
+                never to India. The <strong>Indian Debating League</strong> and the{" "}
+                <strong>IIT Delhi Debating Society</strong> are hosting it. The three chief
+                adjudicators come from India, Australia and South Korea.
               </p>
               <p>
-                The people running it have judged finals at Worlds, chaired them at UADC and run
-                the tab at Australs. You can read what each of them has done on{" "}
+                Between them they have judged Worlds finals, chaired a UADC final and run the
+                Australs tab. Each person&apos;s record is on{" "}
                 <Link href="/people/">their own page</Link>.
               </p>
             </Prose>
@@ -72,25 +70,24 @@ export default function Tournament() {
       </Band>
 
       <Band id="history" tone="cream">
-        <H2 sub="Fifty-two editions, hosted by a different university almost every time.">
+        <H2 sub="A different host each year, chosen by bid.">
           Since 1975
         </H2>
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
           <Prose>
             <p>
-              Australs started as an Australian and New Zealand tournament. It did not stay one. Over
-              five decades the field pulled in universities from Indonesia, the Philippines,
-              Malaysia, Singapore, Japan, Korea, India, Sri Lanka, Bangladesh and Nepal, until the
-              name described the format more than the map.
+              Australs started as a tournament for Australia and New Zealand. Over five decades
+              universities from Indonesia, the Philippines, Malaysia, Singapore, Japan, Korea, India,
+              Sri Lanka, Bangladesh and Nepal joined.
             </p>
             <p>
-              That spread is why the tournament breaks in more than one category. Teams debating in
-              a second or a foreign language get ranked against each other as well as against the
-              whole field, so a team from Jakarta or Hanoi is not measured only against Melbourne.
+              That is why the tournament has more than one break. Teams debating in a second or
+              foreign language (ESL and EFL) compete in the open rankings and also against each
+              other.
             </p>
             <p>
-              Hosting moves. A society bids, wins, and spends two years building the thing. Delhi
-              won 2027, which puts the tournament in India for the first time since it began.
+              A debating society bids to host, and the winner has about two years to prepare. Delhi
+              won the bid for 2027.
             </p>
           </Prose>
           <div className="box h-fit">
@@ -112,27 +109,25 @@ export default function Tournament() {
       </Band>
 
       <Band id="format">
-        <H2 sub="If you have only debated British Parliamentary, read this part.">
+        <H2 sub="Read this if you have only debated British Parliamentary.">
           The format
         </H2>
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
           <Prose>
             <p>
-              Australs uses the <strong>Australasian format</strong>. One team of three faces one
-              other, Affirmative against Negative, on the same motion. Six substantive speeches of
-              eight minutes, alternating sides. Then a four-minute <strong>reply</strong> from each
-              team, given by its first or second speaker. Negative replies first.
+              Australs uses the <strong>Australasian format</strong>: two teams of three,
+              Affirmative against Negative. There are six eight-minute speeches, alternating sides,
+              then a four-minute <strong>reply</strong> from each team, given by its first or second
+              speaker. The Negative replies first.
             </p>
             <p>
-              Two teams changes how a round feels. Nothing sits between you and the people
-              arguing the other side, so every claim you make comes back at you by name. Cases
-              build across three speeches instead of squeezing into one, which rewards depth. The
-              reply asks you to weigh what happened rather than add to it.
+              With only two teams in the room, you answer the other side directly. Your case builds
+              across three speakers, and the reply speech sums up the debate without adding new
+              arguments.
             </p>
             <p>
-              Some motions land in your inbox weeks early. Others go up shortly before you
-              debate them. The adjudication core decides which rounds work which way, and how long
-              you get.
+              Every motion is released thirty minutes before the round. See{" "}
+              <Link href="#rounds">rounds and the break</Link>.
             </p>
           </Prose>
           <div>
@@ -164,24 +159,24 @@ export default function Tournament() {
       <Band id="rounds">
         <div className="max-w-[68ch]">
           <div>
-            <H2 sub="Eight preliminary rounds, then out-rounds for the teams that break. No motion goes out in advance.">
+            <H2 sub="Eight preliminary rounds, then knockout rounds for the teams that break.">
               Rounds and the break
             </H2>
             <Prose className="mt-6">
               <p>
-                There are <strong>eight preliminary rounds</strong>. Every motion is announced
-                thirty minutes before its round: five minutes to choose the motion, twenty-five to
-                prepare. Nothing is released in advance.
+                There are <strong>eight preliminary rounds</strong>. Each motion comes out thirty
+                minutes before the round: you get five minutes to choose a motion and twenty-five to
+                prepare. We release no motions in advance.
               </p>
               <p>
-                There will be an <strong>Open break</strong>. ESL and EFL breaks are announced as
-                well, provided enough teams hold each language status to meet the constitution&apos;s
-                minimum. A Language Team decides statuses, and applications for a language category
-                open closer to the championship.
+                There will be an <strong>Open break</strong>. We will also run ESL and EFL breaks if
+                enough teams hold each language status to meet the constitution&apos;s minimum. A
+                Language Team decides each team&apos;s status, and you can apply for one closer to
+                the tournament.
               </p>
               <p>
-                The day-by-day schedule will be announced closer to the tournament, on the{" "}
-                <Link href="/schedule/">schedule</Link> page.
+                We will post the day-by-day schedule on the{" "}
+                <Link href="/schedule/">schedule</Link> page closer to the tournament.
               </p>
             </Prose>
           </div>
@@ -189,7 +184,7 @@ export default function Tournament() {
       </Band>
 
       <Band id="reach" tone="navy">
-        <H2 sub="Twenty-one advisors, eighteen countries, five regions. These are the places this tournament has people. Eligibility is wider: any university in the Asia Pacific may register.">
+        <H2 sub="Nineteen advisors in eighteen countries, across five regions. You can register from anywhere in the Asia Pacific, with or without an advisor in your country.">
           The network
         </H2>
         <div className="mt-8 min-w-0">
@@ -200,7 +195,7 @@ export default function Tournament() {
       <Band id="organisers" tone="cream">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <H2 sub="Two organisations, running it between them.">Organisers</H2>
+            <H2 sub="Two organisations run it together.">Organisers</H2>
             <Prose className="mt-6">
               <p>
                 <strong>The Indian Debating League</strong> runs debating across Indian universities
@@ -209,8 +204,7 @@ export default function Tournament() {
               </p>
               <p>
                 <strong>The IIT Delhi Debating Society</strong> hosts the tournament on campus and
-                runs it on the ground: the desk, the rooms, the socials and everything that
-                happens between rounds.
+                runs the day-to-day: the desk, the rooms and the socials.
               </p>
             </Prose>
             <Link href="/people/" className="mt-6 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy">

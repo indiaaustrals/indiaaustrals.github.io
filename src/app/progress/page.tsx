@@ -18,7 +18,7 @@ export default function Progress() {
       <PageHead
         kicker="The build log"
         title="Build log"
-        lede="No jargon and no tickets. This is the whole picture: what the site can already do, what it is holding a blank space for, and the name of the person who can fill it in."
+        lede="What the site does today, what it is still waiting on, and who has each answer."
         facts={[
           { k: "Live now", v: `${counts.done} things anyone can do` },
           { k: "Waiting on an answer", v: `${counts.waiting} blanks, all assigned` },
@@ -37,8 +37,8 @@ export default function Progress() {
             <span className="bg-slate/50" style={{ width: `${(counts.later / total) * 100}%` }} />
           </div>
           <p className="mt-2.5 text-[13.5px] text-ink/75">
-            {counts.done} of {total} done. The website itself is finished. What is left is either an
-            answer nobody has given us, or the second build.
+            {counts.done} of {total} done. The rest is either waiting on an answer or part of the
+            second build.
           </p>
         </div>
       </PageHead>
@@ -48,7 +48,7 @@ export default function Progress() {
         <div className="max-w-[62ch]">
           <h2 className="text-[clamp(1.7rem,3.4vw,2.4rem)] text-gold">{groups[1].title}</h2>
           <p className="mt-3 text-[15px] leading-[1.62] text-cream/85">{groups[1].blurb}</p>
-          <p className="mt-2 text-[14px] text-cream/76">Tap a name to see only theirs.</p>
+          <p className="mt-2 text-[14px] text-cream/76">Tap a name to see only their items.</p>
           <a
             href={asset("/open-decisions.xlsx")}
             className="mt-5 inline-block border border-gold/60 bg-gold/15 px-5 py-2.5 text-[14px] text-gold transition-colors duration-150 hover:bg-gold hover:text-ink"
@@ -98,15 +98,13 @@ export default function Progress() {
 
       <Band>
         <div className="grid gap-8 lg:grid-cols-2">
-          <H2 sub="Kept by hand, not generated.">About this page</H2>
+          <H2 sub="We update this page by hand.">About this page</H2>
           <Prose>
             <p>
-              If something here is wrong or out of date, say so and it gets corrected. An honest list
-              is only worth keeping if people trust it.
+              If something here is wrong or out of date, email us and we will fix it.
             </p>
             <p>
-              Everything on the site that is missing an answer says so in place, on the page where
-              you would look for it, and links back here. Nothing has been invented to fill a gap.
+              Wherever the site is missing an answer, it says so on that page and links back here.
             </p>
             <p>
               <Link href="/">Back to the tournament</Link>

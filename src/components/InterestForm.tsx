@@ -12,18 +12,16 @@ export default function InterestForm() {
   if (!live) {
     return (
       <div className="box border-l-2 border-l-gold bg-gold/8 p-6">
-        <p className="rail text-ink/70">Form not switched on</p>
-        <h3 className="mt-2 text-[1.4rem]">There is nowhere to send this yet</h3>
+        <p className="rail text-ink/70">Sign-up coming soon</p>
+        <h3 className="mt-2 text-[1.4rem]">This sign-up is not open yet</h3>
         <p className="mt-3 max-w-[52ch] text-[14.5px] leading-[1.68] text-ink/82">
-          The form is built and waiting on two things: the address sign-ups should land in, and the
-          address confirmations go out from. Until both exist there is nowhere safe to put your
-          details, and collecting them anyway would be worse than saying so.
+          We are setting up an email sign-up. Until then, check back here.
         </p>
         <Link
-          href="/progress/"
+          href="/people/?group=advisor"
           className="mt-4 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy"
         >
-          Org Comm has both →
+          Find your advisor →
         </Link>
       </div>
     );

@@ -24,7 +24,7 @@ export default function Delhi() {
       <PageHead
         kicker="Delhi"
         title="Delhi"
-        lede="Debates run on the IIT Delhi campus in Hauz Khas. Teams sleep at The Grand in Vasant Kunj, half an hour west. Between the two sits some of the oldest built fabric in the city, and the best eating in it."
+        lede="You debate on the IIT Delhi campus in Hauz Khas and stay at The Grand in Vasant Kunj, half an hour away. Some of the city's oldest monuments and best food are between the two."
         facts={[
           { k: "Debating at", v: site.venue },
           { k: "Staying at", v: site.hotel },
@@ -38,26 +38,22 @@ export default function Delhi() {
       <Band id="venue">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <H2 sub="The Indian Institute of Technology Delhi, in Hauz Khas. A green, walkable campus with the Qutub Minar a few minutes down the road.">
+            <H2 sub="The Indian Institute of Technology Delhi, in Hauz Khas. A green campus you can walk end to end.">
               IIT Delhi
             </H2>
             <Prose className="mt-6">
               <p>
-                Preliminary rounds run in the lecture theatres, which are tiered, air conditioned and
-                sized for roughly the audience a debate draws. The opening, the later out-rounds and
-                the grand final go in the main auditorium. The registration desk, the draw and the
-                briefings all happen in one place so you are not walking the campus looking for your
-                room.
+                Preliminary rounds run in the lecture theatres, which are tiered and air conditioned.
+                The opening ceremony, the later knockout rounds and the grand final are in the main
+                auditorium. The registration desk, the draw and the briefings are all in one place.
               </p>
               <p>
-                The <strong>IIT Delhi Debating Society</strong> hosts us. They are the people you
-                will see at the desk each morning, and they know the campus better than any map of
-                it.
+                The <strong>IIT Delhi Debating Society</strong> hosts the tournament. Its members run
+                the desk each morning, so ask them if you get lost.
               </p>
               <p>
-                Campus sits on the Magenta Line. The <strong>IIT Delhi</strong> metro station is
-                at the gate. From there it is around forty minutes to Hauz Khas Village
-                on foot or five by auto.
+                The <strong>IIT Delhi</strong> metro station, on the Magenta Line, is at the gate.
+                Hauz Khas Village is about twenty-five minutes away on foot, or five by auto.
               </p>
             </Prose>
           </div>
@@ -94,24 +90,22 @@ export default function Delhi() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <H2 sub="The Grand New Delhi, in Vasant Kunj. Twin rooms, a pool, and breakfast in the atrium before the draw goes up.">
+            <H2 sub="The Grand New Delhi, in Vasant Kunj. Twin rooms, a pool and a garden.">
               Accommodation
             </H2>
             <Prose className="mt-6">
               <p>
-                It is about twenty minutes from the airport and half an hour to campus, longer when
-                Delhi is having one of its mornings. Vasant Kunj is quiet, residential and has two
-                large malls within walking distance if you have forgotten something.
+                The hotel is about twenty minutes from the airport and half an hour from campus,
+                longer in heavy traffic. Vasant Kunj is a quiet residential area with two large malls
+                in walking distance.
               </p>
               <p>
-                Rooms are twins. Who you share with, how rooms are allocated and whether a night
-                either side of the tournament can be added are all things we will ask you about on a
-                form once your registration is confirmed.
+                Rooms are twins. Once your registration is confirmed, we will ask who you want to
+                share with and whether you need extra nights before or after the tournament.
               </p>
               <p>
-                Your room is part of the USD 630 registration fee. So are the buses that run between
-                The Grand and IIT Delhi every morning and every evening, and your pick-up from and
-                drop to the airport. None of it costs extra.
+                The USD 630 registration fee covers your room, the airport pick-up and drop, and the
+                buses between The Grand and IIT Delhi every morning and evening.
               </p>
             </Prose>
           </div>
@@ -119,46 +113,46 @@ export default function Delhi() {
       </Band>
 
       <Band id="city">
-        <H2 sub="You will have mornings free and at least one proper evening. Delhi rewards both.">
+        <H2 sub="Where to go if you have a free morning or evening.">
           The city
         </H2>
         <div className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               h: "Hauz Khas",
-              p: "A thirteenth-century reservoir, a madrasa and a tomb, with a deer park attached and a village of bars and restaurants built up the hill behind it. Ten minutes from campus and the obvious place for a round-two debrief.",
+              p: "A medieval reservoir, a madrasa and a tomb, next to a deer park and a village full of bars and restaurants. Five minutes from campus by auto, and the usual place to go after rounds.",
             },
             {
               h: "Qutub Minar",
-              p: "The tallest brick minaret in the world, begun in 1193, a few minutes south of campus. Go early, before the heat and the queue.",
+              p: "The tallest brick minaret in the world, begun in 1193. About fifteen minutes south of campus by road. Go early to beat the heat and the queue.",
             },
             {
               h: "Mehrauli Archaeological Park",
-              p: "Next to the Qutub and almost empty by comparison. Tombs, stepwells and a ruined mosque scattered through scrub. The best hour you can spend within walking distance of the venue.",
+              p: "Next to the Qutub Minar and far quieter. Tombs, stepwells and a ruined mosque spread through open scrubland.",
             },
             {
               h: "Lodhi Gardens",
-              p: "Ninety acres of fifteenth-century tombs in a park where the city goes to walk. Twenty minutes north. Pair it with the street art in Lodhi Colony.",
+              p: "A ninety-acre park with fifteenth-century tombs, where Delhi goes for a walk. Twenty minutes north of campus. The street art in Lodhi Colony is next door.",
             },
             {
               h: "Humayun's Tomb",
-              p: "The Mughal garden tomb the Taj Mahal was built from the idea of. Restored properly, and worth the trip east.",
+              p: "The Mughal garden tomb that inspired the Taj Mahal, well restored and worth the trip east.",
             },
             {
               h: "Old Delhi",
-              p: "Chandni Chowk, Jama Masjid and the lanes around them. Loud, crowded and the best food in the city. Take the Yellow Line to Chandni Chowk rather than driving.",
+              p: "Chandni Chowk, the Jama Masjid and the lanes around them. Loud and crowded, with the best street food in the city. Take the Yellow Line metro to Chandni Chowk; driving there is slow.",
             },
             {
               h: "Eating",
-              p: "Regional India compressed into one city. Punjabi, Mughlai, South Indian, Tibetan in Majnu ka Tilla, Bengali in CR Park. Every kitchen assumes vegetarian first.",
+              p: "Food from all over India in one city: Punjabi, Mughlai and South Indian everywhere, Tibetan in Majnu ka Tilla, Bengali in CR Park. Vegetarian food is easy to find.",
             },
             {
               h: "Getting about",
-              p: "The Metro is clean, fast, cheap and air conditioned, and it reaches almost everywhere on this page. Buy a tourist card at the airport. Otherwise use Uber or Ola rather than flagging autos.",
+              p: "The metro is cheap, air conditioned and reaches most places on this list. You can buy a tourist card at the airport. For everything else, use Uber or Ola instead of hailing an auto.",
             },
             {
               h: "A warning",
-              p: "Late June is genuinely hot and the air is not good. Drink more water than you think you need, carry a bottle into every round, and do not plan a long walk in the middle of the day.",
+              p: "Late June is very hot. Drink more water than you think you need, and avoid long walks in the middle of the day.",
             },
           ].map((c) => (
             <div key={c.h} className="border-t border-ink/15 pt-4">
@@ -172,38 +166,34 @@ export default function Delhi() {
       <Band id="getting-here" tone="navy">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <H2 sub="Everything arrives through one airport, and it is a good one.">Getting here</H2>
+            <H2 sub="Fly into Indira Gandhi International. We pick you up from there.">Getting here</H2>
             <Prose className="mt-6 text-cream/88">
               <p>
-                <strong>Indira Gandhi International (DEL)</strong> is the only international airport
-                serving Delhi. Terminal 3 takes almost all long-haul and most regional traffic. It
-                flies direct from Singapore, Kuala Lumpur, Bangkok, Hong Kong, Seoul, Tokyo,
-                Sydney, Melbourne, Colombo, Dhaka and Kathmandu.
+                <strong>Indira Gandhi International (DEL)</strong> is Delhi&apos;s main airport.
+                It has direct flights from Singapore, Kuala Lumpur, Bangkok, Hong Kong, Tokyo, Sydney,
+                Melbourne, Colombo, Dhaka and Kathmandu.
               </p>
               <p>
-                From the airport to the hotel is about twenty minutes by road. The Airport Express
-                metro runs into the centre in twenty, but for Vasant Kunj a car is simpler. Prepaid
-                taxi counters sit inside the arrivals hall; Uber and Ola both work and have marked
-                pickup zones.
+                Airport pick-up and drop are included in your fee. The hotel is about twenty minutes
+                from the airport by road.
               </p>
               <p>
                 If you are coming overland from Nepal or Bangladesh, or by train from elsewhere in
-                India, tell us on the arrivals form and we will make sure someone is expecting you.
+                India, tell us when you register and we will arrange to meet you.
               </p>
             </Prose>
           </div>
           <div id="visas">
-            <H2 sub="Most of the region can apply online. Start early anyway.">Visas</H2>
+            <H2 sub="Most of the region can apply online. Apply early.">Visas</H2>
             <Prose className="mt-6 text-cream/88">
               <p>
-                India runs an <strong>e-Visa</strong> scheme that covers most nationalities in this
-                tournament&apos;s reach, applied for online before you travel. It is usually granted
-                in a few working days, but the window and the documents differ by country, so check
-                your own high commission rather than a friend&apos;s experience.
+                Most nationalities at this tournament can get an Indian <strong>e-Visa</strong>{" "}
+                online before they travel. It usually takes a few working days, but the rules differ
+                by country, so check with the Indian high commission in yours.
               </p>
               <p>
-                Some nationalities need a full visa through a consulate, which takes longer and
-                normally wants an invitation letter from the host.
+                Some nationalities need a regular visa from a consulate. That takes longer and
+                usually needs an invitation letter from us.
               </p>
             </Prose>
           </div>
@@ -213,16 +203,16 @@ export default function Delhi() {
       <Band id="weather" tone="cream">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <H2 sub="Late June into early July is the turn of the monsoon.">Weather and kit</H2>
+            <H2 sub="The monsoon usually arrives during the tournament.">Weather and kit</H2>
           </div>
           <div className="grid gap-x-10 gap-y-6 sm:grid-cols-2">
             {[
-              ["Heat", "35–40°C in the day, rarely below 28 at night. Humid once the rain arrives."],
-              ["Rain", "The monsoon usually breaks over Delhi in the last week of June. Expect sudden, heavy, short downpours rather than all-day drizzle."],
-              ["Indoors", "Every debating room and the hotel are air conditioned, and the contrast is sharp. Bring something with sleeves for rounds."],
-              ["Clothes", "Light cotton and linen. One set of smart clothes for the final and the dinner. Sandals you do not mind getting wet."],
-              ["Carry", "A refillable bottle, sunscreen, an umbrella, and any medication you take. Pharmacies sit on every corner. Your brand may not."],
-              ["Power", "230V, Type C, D and M sockets. A universal adapter covers it."],
+              ["Heat", "35–40°C in the day and rarely below 28°C at night. Humid once the rain starts."],
+              ["Rain", "The monsoon usually reaches Delhi in the last week of June. Expect short, heavy downpours."],
+              ["Indoors", "The debating rooms and the hotel are air conditioned and can feel cold. Bring a layer for rounds."],
+              ["Clothes", "Light cotton or linen, one smart outfit for the final and the dinner, and sandals you can get wet."],
+              ["Carry", "A refillable bottle, sunscreen, an umbrella and any medicines you take. Pharmacies are everywhere, but they may not stock your brand."],
+              ["Power", "230V, with Type C, D and M sockets. A universal adapter works."],
             ].map(([h, p]) => (
               <div key={h} className="border-t border-ink/15 pt-3.5">
                 <h3 className="rail text-navy">{h}</h3>
@@ -234,14 +224,14 @@ export default function Delhi() {
       </Band>
 
       <Band id="access">
-        <H2 sub="We would rather check this properly than tell you it is fine and be wrong when you arrive.">
+        <H2 sub="What we know so far about getting around the venue and the hotel.">
           Access
         </H2>
         <Prose className="mt-6">
           <p>
-            Both the campus and the hotel have lifts and ramps in places. Neither has been walked
-            end to end with a wheelchair, a mobility aid or a support worker in mind, and until that
-            is done we are not going to describe either as step-free.
+            The campus and the hotel both have lifts and ramps in places. We have not yet checked
+            either fully for step-free access, so we will not call them step-free. If you have
+            access needs, email us and we will tell you what we know.
           </p>
         </Prose>
       </Band>

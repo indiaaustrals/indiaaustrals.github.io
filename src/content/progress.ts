@@ -7,52 +7,51 @@ export type Group = {
   items: Item[];
 };
 
-export const updated = "11 October 2026";
+export const updated = "12 October 2026";
 
 export const groups: Group[] = [
   {
     key: "live",
     title: "Live now",
     tone: "done",
-    blurb: "Anyone with the link can do all of this today.",
+    blurb: "You can do all of this on the site today.",
     items: [
-      { what: "Read what the tournament is, when it runs and where it is held" },
+      { what: "Read what the tournament is, when it runs and where" },
       {
-        what: "Understand how Australs is actually debated, speech by speech",
-        note: "Useful if you have only ever debated British Parliamentary",
+        what: "Learn how the Australasian format works, speech by speech",
+        note: "For anyone who has only debated British Parliamentary",
       },
       {
-        what: "See all thirty-three people, and open any of them",
-        note: "Judges, organisers and all nineteen regional advisors carry their debating record, taken from the posters and the bid document",
+        what: "See all thirty-three people on the team",
+        note: "Each judge, organiser and regional advisor has a page with their debating record from the posters and bid document",
       },
       {
-        what: "Read what a regional advisor actually does, and who else covers your region",
+        what: "Find your regional advisor and what they do",
       },
       {
-        what: "See the eighteen countries our advisors cover, drawn as routes into Delhi",
-        note: "Filterable by region, and every country lists its advisor",
+        what: "See the eighteen countries our advisors cover on a map",
+        note: "Filter by region; each country lists its advisor",
       },
       {
-        what: "Read a real guide to Delhi",
-        note: "The venue, the hotel, nine places worth a free morning, flights, visas, weather and what to pack",
+        what: "Read a guide to Delhi",
+        note: "The venue, the hotel, nine places to visit, flights, visas, weather and what to pack",
       },
       {
-        what: "Understand what hosting an Australs involves, and how the tournament grew since 1975",
+        what: "Read how Australs has grown since 1975",
       },
       {
-        what: "See the fee, everything it covers, and who may enter",
+        what: "See the fee, what it covers, and who can enter",
         note: "USD 630: room at The Grand, airport pick-up and drop, daily buses, five lunches, five dinners, four socials",
       },
-      { what: "Read how the rounds, motions and the break work" },
-      { what: "Read who can apply for a scholarship and what it covers" },
+      { what: "Read how the rounds, motions and breaks work" },
+      { what: "Read who can apply for a scholarship" },
       {
-        what: "Find every question we cannot answer yet on the page where you would look for it",
-        note: "Marked in place with the name of whoever holds the answer, rather than hidden in a list of questions",
+        what: "See what we have not decided yet, on the page it belongs to",
+        note: "Each gap names the person who will answer it",
       },
-      { what: "Leave a name and an email to be told the day registration opens" },
-      { what: "Find who to ask about what, and email the tournament at its own address" },
-      { what: "Read all of it on a phone, with a keyboard, or with a screen reader" },
-      { what: "Follow this page to see exactly where the website stands" },
+            { what: "Find who to ask about what, and email the tournament" },
+      { what: "Use the site on a phone, with a keyboard or with a screen reader" },
+      { what: "Check this page to see where the website stands" },
     ],
   },
   {
@@ -60,24 +59,24 @@ export const groups: Group[] = [
     title: "Waiting on an answer",
     tone: "waiting",
     blurb:
-      "Each of these is a blank on the site right now. The page is already built and needs the answer typed in. The name beside it belongs to whoever has it.",
+      "Each of these is a gap on the site. The name next to it is the person who has the answer.",
     items: [
       {
         area: "Equity",
-        what: "Who sits on the equity team, and the confidential address to reach them",
+        what: "Who is on the equity team, and their confidential email",
         owner: "Equity team",
       },
       {
         area: "Equity",
         what: "The equity policy, written out in full",
-        note: "Published by the equity team with input from the adjudication core and Org Comm",
+        note: "The equity team writes it, with input from the adjudication core and organising committee",
         owner: "Equity team",
       },
       {
         area: "People",
-        what: "Photos of Shivangi Sharma and Garvit Gosain",
-        note: "They are on the site with their initials until then",
-        owner: "Shivangi and Garvit",
+        what: "A photo of Garvit Gosain",
+        note: "The card shows initials until then",
+        owner: "Garvit",
       },
     ],
   },
@@ -86,18 +85,18 @@ export const groups: Group[] = [
     title: "The second build",
     tone: "later",
     blurb:
-      "None of this can sit on a plain website. It needs people to sign in and a place to keep their answers, which is a separate build. It is not started, and it does not need to be until registration opens.",
+      "These need sign-in and a database, so they are a separate build. Work starts closer to registration.",
     items: [
-      { what: "Signing in, with a personal page for each team and judge" },
-      { what: "The registration form itself, and showing whether payment has landed" },
-      { what: "A checklist per team of every form they still owe us, with deadlines" },
-      { what: "Separate views for each committee, so people only see their own work" },
+      { what: "Sign-in, with a page for each team and judge" },
+      { what: "The registration form, with payment status" },
+      { what: "A checklist of forms and deadlines for each team" },
+      { what: "A separate view for each committee" },
       { what: "Confidential handling of equity and grievance cases" },
-      { what: "Announcements that go out by email and appear when someone signs in" },
-      { what: "Letting the organising committee pull the numbers out into a spreadsheet" },
-      { what: "Checking people in on the day with a QR code" },
+      { what: "Announcements by email and on sign-in" },
+      { what: "Spreadsheet exports for the organising committee" },
+      { what: "QR code check-in on the day" },
       { what: "Certificates after the tournament" },
-      { what: "Showing the live tab, draws and results on this site" },
+      { what: "The live tab, draws and results on this site" },
     ],
   },
 ];

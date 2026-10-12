@@ -72,14 +72,14 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
       <Band>
         {p.group === "advisor" && (
           <div className="mb-12">
-            <H2 sub={`Nineteen people do this job, one or two for each debating circuit Australs reaches. ${p.name} covers ${p.country}.`}>
+            <H2 sub={`There are nineteen regional advisors, one or two per circuit. ${p.name} covers ${p.country}.`}>
               What an advisor does
             </H2>
             <div className="mt-7 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                ["Answers first", `Questions from ${p.country} reach ${p.name.split(" ")[0]} before they reach us, and usually get answered the same day.`],
-                ["Carries the news", "Registration dates, fees and deadlines go out through the circuits, not only through this site."],
-                ["Reports back", "What a circuit needs on cost, visas and timing comes back to the organising committee through its advisor."],
+                ["Answers first", `If you debate in ${p.country}, ask ${p.name.split(" ")[0]} first. ${p.name.split(" ")[0]} knows your circuit and can reach us directly.`],
+                ["Carries the news", "Advisors pass registration dates, fees and deadlines on to their circuits as soon as we publish them."],
+                ["Reports back", "Advisors tell the organising committee what their circuit needs on cost, visas and timing."],
               ].map(([h, t]) => (
                 <div key={h} className="border-t border-ink/15 pt-4">
                   <h3 className="rail text-navy">{h}</h3>
@@ -94,7 +94,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           <>
             <H2
               count={`${p.credits.length} entries`}
-              sub="Taken line by line from the tournament's own announcement posters and the bid document. Nothing added, nothing inferred."
+              sub="Copied from the tournament's announcement posters and bid document."
             >
               Debating record
             </H2>
@@ -131,14 +131,14 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           </>
         ) : (
           <p className="max-w-[64ch] text-[15px] leading-[1.7] text-ink/82">
-            {p.name.split(" ")[0]} joined the organising committee after the posters went out, so
-            there is no published record for us to copy here yet.
+            {p.name.split(" ")[0]} joined the organising committee after the announcement posters
+            went out, so we have no record to show here yet.
           </p>
         )}
 
         {siblings.length > 0 && (
           <div className="mt-12">
-            <H2 sub={p.region ? `The rest of the people carrying this tournament into ${p.region}.` : undefined}>
+            <H2 sub={p.region ? `Other people on the team from ${p.region}.` : undefined}>
               {p.group === "advisor" ? `Also in ${p.region}` : "Alongside"}
             </H2>
             <div className="mt-7 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">

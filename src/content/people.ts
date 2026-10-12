@@ -201,6 +201,7 @@ export const people: Person[] = [
     role: "Organising Committee",
     country: "India",
     region: "South Asia",
+    photo: "shivangi-sharma",
     credits: [],
   },
   {
@@ -218,7 +219,7 @@ export const people: Person[] = [
     group: "senior",
     role: "Senior Advisor",
     photo: "anjali",
-    bio: "An EdTech entrepreneur with over twenty years in strategy, digital transformation, consulting and scaling organisations. She has held leadership roles at GE Capital, Genpact and in the Future Skills ecosystem, has organised many large tournaments, and brings deep experience of building and growing large learning communities.",
+    bio: "An EdTech entrepreneur with more than twenty years in strategy, digital transformation and consulting. She has held leadership roles at GE Capital, Genpact and in the Future Skills ecosystem, and has organised many large tournaments.",
     credits: [],
   },
   {
@@ -227,7 +228,7 @@ export const people: Person[] = [
     group: "senior",
     role: "Senior Advisor",
     photo: "kamal",
-    bio: "Co-founder of the Indian Debating League, with a decade in EdTech. He has championed debating as a skill every student should learn, and has supported Indian teams competing at the majors.",
+    bio: "Co-founder of the Indian Debating League, with a decade in EdTech. He has pushed for debating to be taught to every student, and has supported Indian teams at the major international tournaments.",
     credits: [],
   },
 ];

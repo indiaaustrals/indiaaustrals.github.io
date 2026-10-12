@@ -21,11 +21,11 @@ function days() {
 }
 
 const willAppear = [
-  ["Registration desk", "Where it is and what time it opens each morning"],
-  ["Round release", "When each motion goes up and when it debates"],
-  ["The break", "When it is announced, and the out-round times"],
-  ["Socials", "The opening night, the dinner and the grand final"],
-  ["Transport", "Bus times between The Grand and campus, morning and evening"],
+  ["Registration desk", "Where it is and when it opens each morning"],
+  ["Rounds", "When each round starts and when its motion comes out"],
+  ["The break", "When it is announced, and the knockout round times"],
+  ["Socials", "Dates and places for all four socials"],
+  ["Transport", "Bus times between The Grand and campus"],
 ];
 
 export default function Schedule() {
@@ -35,7 +35,7 @@ export default function Schedule() {
       <PageHead
         kicker="Schedule"
         title="The week"
-        lede={`The tournament runs ${site.datesLabel}. There are eight preliminary rounds. The tab team is now setting which day each one falls on, so there is nothing here yet we would ask you to book a flight around.`}
+        lede={`The tournament runs ${site.datesLabel}. There are eight preliminary rounds. We will publish which round falls on which day closer to the tournament. Book flights for the full dates.`}
         facts={[
           { k: "First day", v: `${list[0].weekday} ${list[0].date}` },
           { k: "Last day", v: `${list[list.length - 1].weekday} ${list[list.length - 1].date}` },
@@ -64,8 +64,7 @@ export default function Schedule() {
             </H2>
             <Prose className="mt-6">
               <p>
-                Which round falls on which day, the socials and the bus times will all be published
-                here once they are set.
+                We will add the rounds, socials and bus times here once they are set.
               </p>
             </Prose>
             <Link href="/progress/" className="mt-5 inline-block border-b border-navy/40 pb-0.5 text-[14.5px] text-navy hover:border-navy">

@@ -8,17 +8,17 @@ export const metadata = { title: "Contact" };
 const routes = [
   {
     who: "The organising committee",
-    what: "Registration, fees, rooms, food, transport, invitation letters. Anything logistical.",
+    what: "Registration, fees, rooms, food, transport and visa letters.",
     group: "oc" as const,
   },
   {
     who: "The adjudication core",
-    what: "Format, motions, judge requirements, the break, adjudication standards.",
+    what: "The format, motions, judge rules, the break and judging standards.",
     group: "cap" as const,
   },
   {
     who: "The tab team",
-    what: "The draw, clashes, judge allocation, anything about the running order.",
+    what: "The draw, clashes, judge allocation and the round schedule.",
     group: "tab" as const,
   },
 ];
@@ -29,14 +29,14 @@ export default function Contact() {
       <PageHead
         kicker="Contact"
         title="Contact"
-        lede="Most of what lands in our inbox is already answered on the page it belongs to. If yours is not, these are the people holding the answer. Your own regional advisor is usually the fastest way in."
+        lede="Check the relevant page first; most answers are already on the site. If yours is not, email us or ask your regional advisor."
         facts={[
           { k: "Email", v: contactEmail, href: `mailto:${contactEmail}` },
           { k: "Logistics", v: "Organising committee" },
           { k: "Judging and format", v: "Adjudication core" },
           { k: "Draw and clashes", v: "Tab team" },
           { k: "Equity", v: "Contact not published yet", href: "/register/#equity" },
-          { k: "Your region", v: "Twenty-one advisors", href: "/people/?group=advisor" },
+          { k: "Your region", v: "Nineteen regional advisors", href: "/people/?group=advisor" },
         ]}
       />
 
@@ -63,7 +63,7 @@ export default function Contact() {
         </div>
 
         <p className="mt-8 max-w-[68ch] text-[15px] leading-[1.7] text-ink/85">
-          Everything reaches all three through one address:{" "}
+          One address reaches all three teams:{" "}
           <a href={`mailto:${contactEmail}`} className="border-b border-navy/40 text-navy hover:border-navy">
             {contactEmail}
           </a>
@@ -71,7 +71,7 @@ export default function Contact() {
       </Band>
 
       <Band tone="navy">
-        <H2 sub="If you debate in one of these countries, your advisor is the fastest way in. They know this tournament and they know your circuit.">
+        <H2 sub="If you debate in one of these countries, your advisor knows your circuit and is often the quickest person to ask.">
           By region
         </H2>
         <div className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -19,7 +19,7 @@ export default function Home() {
       <Band tone="navy">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-14">
           <div>
-            <H2 sub="Australs has never been held in India. Twenty-one advisors across eighteen countries are getting the word into their own circuits, and every dot on this sheet is one of them.">
+            <H2 sub="Nineteen advisors in eighteen countries are telling their circuits about Delhi. Each dot is one of them.">
               The network
             </H2>
             <Link href="/tournament/#reach" className="mt-5 inline-block border-b border-gold/50 pb-0.5 text-[14.5px] text-gold hover:border-gold">
@@ -31,7 +31,7 @@ export default function Home() {
       </Band>
 
       <Band tone="cream">
-        <H2 sub="Three chief adjudicators, drawn from three of the regions the tournament serves. Two people running the tab who have done it at Australs and at Worlds.">
+        <H2 sub="Three chief adjudicators from India, Australia and South Korea, and a tab team led by Jemma Griffin, who ran the tab at Australs 2026.">
           The team
         </H2>
         <div className="mt-8 grid gap-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
@@ -47,7 +47,7 @@ export default function Home() {
       <Band>
         <div className="grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
-            <H2 sub="Debates at IIT Delhi in Hauz Khas. Beds at The Grand in Vasant Kunj, half an hour west when the roads behave.">
+            <H2 sub="You debate at IIT Delhi in Hauz Khas and sleep at The Grand in Vasant Kunj, half an hour away by bus.">
               Delhi in late June
             </H2>
             <Prose className="mt-6">
@@ -57,19 +57,19 @@ export default function Home() {
                 we recommend carrying a bottle of water with you into each room.
               </p>
               <p>
-                The Qutub Minar is five minutes from campus. A thirteenth-century reservoir and a
-                ruined madrasa are ten. Old Delhi and the best food in the country sit forty minutes
-                north on the Yellow Line.
+                The Qutub Minar is fifteen minutes from campus by road, and Hauz Khas, with its
+                medieval reservoir and ruined madrasa, is five minutes by auto. Old Delhi is about forty minutes north
+                by metro.
               </p>
             </Prose>
             <ul className="mt-7 border-t border-ink/15">
               {[
                 ["The venue", "Lecture theatres and the auditorium at IIT Delhi", "/delhi/#venue"],
-                ["Accommodation", "The Grand New Delhi, twin rooms, pool, atrium breakfast", "/delhi/#stay"],
-                ["The city", "Nine places worth your free morning", "/delhi/#city"],
-                ["Getting here", "One airport, and how you reach campus from it", "/delhi/#getting-here"],
-                ["Visas", "An e-Visa covers most of the region", "/delhi/#visas"],
-                ["Weather and kit", "What to pack for a Delhi monsoon", "/delhi/#weather"],
+                ["Accommodation", "The Grand New Delhi: twin rooms and a pool", "/delhi/#stay"],
+                ["The city", "Nine things to do on a free morning", "/delhi/#city"],
+                ["Getting here", "The airport, and getting from it to the hotel", "/delhi/#getting-here"],
+                ["Visas", "Most of the region can apply online", "/delhi/#visas"],
+                ["Weather and kit", "What to pack for the monsoon", "/delhi/#weather"],
               ].map(([h, p, href]) => (
                 <li key={h}>
                   <Link href={href} className="rec grid gap-x-5 px-2 py-2.5 sm:grid-cols-[minmax(0,10rem)_1fr]">
@@ -81,8 +81,8 @@ export default function Home() {
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-3 self-start">
-            <Image src={asset("/img/cards/venue-iitd.webp")} alt="The auditorium and main building at IIT Delhi" width={760} height={950} className="box w-full p-1" unoptimized />
-            <Image src={asset("/img/cards/acco-grand.webp")} alt="The Grand New Delhi" width={760} height={950} className="box mt-8 w-full p-1" unoptimized />
+            <Image src={asset("/img/photos/iitd-main-building-2.webp")} alt="The main building at IIT Delhi" width={1400} height={1050} className="box aspect-[3/4] w-full object-cover p-1" unoptimized />
+            <Image src={asset("/img/photos/grand-exterior-pool.webp")} alt="The Grand New Delhi seen across the pool" width={1400} height={933} className="box mt-8 aspect-[3/4] w-full object-cover p-1" unoptimized />
           </div>
         </div>
       </Band>
@@ -90,7 +90,7 @@ export default function Home() {
       <Band tone="navy">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-14">
           <div>
-            <H2 sub="Most tournament sites go quiet about anything undecided. We publish the list instead, and put a name against each line.">
+            <H2 sub="These are the things we have not decided yet, each with the name of the person who will answer it.">
               Still open
             </H2>
             <div className="mt-6 flex gap-7">

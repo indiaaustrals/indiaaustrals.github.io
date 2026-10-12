@@ -4,12 +4,12 @@ import { PageHead, Band, H2, Prose } from "@/components/Shell";
 export const metadata = { title: "Prep and policies" };
 
 const planned = [
-  ["Participant handbook", "The format, the rules, the schedule, the venue, and what to do if something goes wrong. One document instead of six announcements.", "Organising committee"],
+  ["Participant handbook", "The format, rules, schedule, venue, and what to do if something goes wrong, in one document.", "Organising committee"],
   ["Equity policy", "What counts as an equity issue, how to raise one, who reads it, and what happens next.", "Equity team"],
-  ["Adjudication guide", "How this tournament expects judges to weigh arguments, give feedback and fill a ballot.", "Adjudication core"],
+  ["Adjudication guide", "How judges at this tournament should weigh arguments, give feedback and fill in a ballot.", "Adjudication core"],
   ["Motions and prep", "Past Australs motions, and general reading to prepare for the rounds.", "Adjudication core"],
-  ["Briefing videos", "Short recordings from the chief adjudicators, for teams new to the Australasian format.", "Adjudication core"],
-  ["Travel and visa notes", "What a visa takes from each country, getting in from the airport, and what to pack for Delhi in June.", "Organising committee"],
+  ["Briefing videos", "Short videos from the chief adjudicators for teams new to the Australasian format.", "Adjudication core"],
+  ["Travel and visa notes", "Visa requirements by country, arriving at the airport, and what to pack.", "Organising committee"],
 ];
 
 export default function Resources() {
@@ -18,7 +18,7 @@ export default function Resources() {
       <PageHead
         kicker="Prep and policies"
         title="Nothing to read yet"
-        lede="This page will hold everything you need before you arrive. None of it is written. Rather than leave it blank we have listed what is coming and who is writing each piece."
+        lede="Everything you need to read before the tournament will go here. Nothing is published yet, so this is what is coming and who is writing it."
         facts={[
           { k: "Documents planned", v: "Six" },
           { k: "Published", v: "None" },
@@ -38,21 +38,16 @@ export default function Resources() {
         </ul>
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           <div>
-            <H2 sub="The page is built. It waits on words, not on code. The moment any of these exists it appears here.">
-              The delay
+            <H2 sub="Each document will appear here as soon as it is written.">
+              In the meantime
             </H2>
           </div>
           <Prose>
             <p>
-              Some of what would normally sit in a handbook is already written and already on the
-              site: the <Link href="/tournament/#format">format is explained in full</Link>,{" "}
-              <Link href="/delhi/#getting-here">visas and travel</Link> are covered, and{" "}
-              <Link href="/delhi/#weather">what to pack</Link> is there too. What is missing is
-              everything that needs a decision behind it.
-            </p>
-            <p>
-              <Link href="/progress/">The build log</Link> lists each of those decisions and who is
-              making it.
+              Some of it is already on the site: the{" "}
+              <Link href="/tournament/#format">format</Link>,{" "}
+              <Link href="/delhi/#getting-here">visas and travel</Link>, and{" "}
+              <Link href="/delhi/#weather">what to pack</Link>.
             </p>
           </Prose>
         </div>

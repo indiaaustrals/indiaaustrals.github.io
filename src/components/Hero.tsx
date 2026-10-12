@@ -34,12 +34,11 @@ export default function Hero() {
           </span>
         </h1>
         <p className="mx-auto mt-5 max-w-[42ch] text-[1.0625rem] leading-[1.6] text-ink/80">
-          The Australasian Intervarsity Debating Championship comes to India for the first time in
-          fifty-two years.
+          The Australasian Intervarsity Debating Championship comes to India for the first time.
         </p>
         <div className="mt-7 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
           <Link href="/register/" className="w-full max-w-xs bg-navy px-7 py-3 text-[14.5px] text-cream transition-colors duration-150 hover:bg-ink sm:w-auto">
-            Tell me when registration opens
+            How registration works
           </Link>
           <Link href="/people/" className="w-full max-w-xs border border-ink/30 px-7 py-3 text-[14.5px] transition-colors duration-150 hover:border-navy hover:bg-navy hover:text-cream sm:w-auto">
             See who is running it

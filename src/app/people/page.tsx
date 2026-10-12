@@ -12,17 +12,18 @@ export default function People() {
       <PageHead
         kicker="People"
         title="The people"
-        lede="Thirty-three of them, across nine countries. Three chief adjudicators set the motions and the standard. Two people run the tab. Seven organise. Twenty-one advisors carry the tournament into their own circuits. Open anyone to read what they have done."
+        lede="Thirty-three people: three chief adjudicators, two on the tab, seven organisers, two senior advisors and nineteen regional advisors. Click anyone to see their record."
         facts={[
           { k: "Adjudication core", v: "Three" },
           { k: "Tab team", v: "Two" },
           { k: "Organising committee", v: "Seven" },
-          { k: "Advisors", v: "Twenty-one, in five regions" },
+          { k: "Senior advisors", v: "Two" },
+          { k: "Regional advisors", v: "Nineteen, in five regions" },
         ]}
       />
 
       <Band>
-        <H2 sub="They pick the motions, brief the judges and decide how the break works. Between them they have judged finals at Worlds, Australs, ABP and UADC.">
+        <H2 sub="They set the motions, brief the judges and decide how the break works. Between them they have judged finals at Worlds, Australs, ABP and UADC.">
           Adjudication core
         </H2>
         <div className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
@@ -33,7 +34,7 @@ export default function People() {
       </Band>
 
       <Band tone="cream">
-        <H2 sub="They draw every round, allocate every judge and keep eight days running to time.">
+        <H2 sub="They make the draw for every round, allocate the judges and keep the rounds on time.">
           Tab team
         </H2>
         <div className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
@@ -44,7 +45,7 @@ export default function People() {
       </Band>
 
       <Band>
-        <H2 sub="The people you will be writing to about registration, rooms, food and everything that is not a debate.">
+        <H2 sub="Write to them about registration, rooms, food and anything else that is not a debate.">
           Organising committee
         </H2>
         <div className="mt-8 grid gap-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
@@ -54,7 +55,7 @@ export default function People() {
         </div>
 
         <div className="mt-12">
-          <H2 sub="Two people who have run tournaments in India for longer than most of the committee has been debating.">
+          <H2 sub="Two people with long experience of running large tournaments in India.">
             Senior advisors
           </H2>
           <div className="mt-8 grid gap-7 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
@@ -66,7 +67,7 @@ export default function People() {
       </Band>
 
       <Band tone="navy">
-        <H2 sub="Every region Australs draws from has somebody on the ground here. If you debate in one of these countries, start with your own.">
+        <H2 sub="Each region Australs draws from has at least one advisor. If you debate in one of these countries, your advisor is the person to ask first.">
           Advisors
         </H2>
         <div className="mt-8 space-y-10">

@@ -14,15 +14,14 @@ const sections = [
   { id: "money", label: "Fees and scholarships" },
   { id: "judges", label: "Bringing a judge" },
   { id: "equity", label: "Equity" },
-  { id: "notify", label: "Hear about it first" },
+  { id: "notify", label: "Get the date" },
 ];
 
 const steps = [
-  ["Leave your details", "Name, email, university. That is all we hold until registration opens, and it is all we will ever hold without asking."],
-  ["We tell you the day it opens", "In the same message: the fee, what it covers, who may enter and how long you have. You will not have to chase four announcements to work out whether you can come."],
-  ["Your university registers its teams and judges", "There are no individual registrations. One representative signs up for every team and judge slot the university wants. Invited adjudicators apply separately."],
-  ["You pay, and we confirm", "Once payment lands we confirm your place, and only then does your account exist. Confirmation carries your sign-in details."],
-  ["Your own page opens", "Every form you still owe us, with its deadline, in one list. No more hunting through five emails and a spreadsheet you cannot open."],
+  ["We announce the dates", "We publish when registration opens and closes on this site, and every regional advisor passes it on the same day."],
+  ["Your university registers its teams and judges", "One representative signs up all of the university's teams and judges. Individuals cannot register on their own. Invited adjudicators apply separately."],
+  ["You pay, and we confirm", "We confirm your place once your payment arrives."],
+  ["You fill in your details", "After confirmation we ask for each person's dietary, access and room-sharing needs."],
 ];
 
 export default function Register() {
@@ -31,7 +30,7 @@ export default function Register() {
       <PageHead
         kicker="Register"
         title="Registration is not open yet"
-        lede="When it opens, it opens complete. Fee, eligibility, deadlines and judge requirements go up together, so you can decide in one sitting instead of four. Leave an email and you hear before anyone announces it anywhere else."
+        lede="The fee and who can enter are below. We will announce the registration dates and payment details here when they are set."
         facts={[
           { k: "Status", v: "Not open" },
           { k: "Opens", v: "To be announced" },
@@ -45,7 +44,7 @@ export default function Register() {
 
       <Band id="how">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-          <H2 sub="Five steps, from today to your first round.">How this will work</H2>
+          <H2 sub="Four steps, from the announcement to the tournament.">How this will work</H2>
           <ol className="border-t border-ink/15">
             {steps.map(([h, p], i) => (
               <li key={h} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-ink/15 py-4">
@@ -69,22 +68,21 @@ export default function Register() {
         <div className="mt-7 max-w-[68ch]">
           <Prose>
             <p>
-              It is a university tournament, debated in teams of three. A representative of each
-              university signs up for its team and judge slots; there are no individual
-              registrations. You do not need to have debated Australs before, and there is no
-              qualification tournament to get through.
+              Teams of three represent their university, and one person from each university
+              registers all of its teams and judges. You do not need to have debated at Australs
+              before, and there is no qualifying tournament.
             </p>
             <p>
-              Institutions from the Middle East and Central Asia often compete at the European
-              championship because it is closer. If yours would rather come to Delhi, register: we
-              look at entries from those regions one by one.
+              Universities from the Middle East and Central Asia usually go to the European
+              championship. If yours would rather come to Delhi, register and we will consider your
+              entry.
             </p>
             <p>
               There is <strong>no cap</strong> on the number of teams a university can enter.
             </p>
             <p>
-              If you are unsure whether your circuit is in scope, ask your{" "}
-              <Link href="/people/">regional advisor</Link>. They will know before we publish it.
+              Not sure if your university can enter? Ask your{" "}
+              <Link href="/people/">regional advisor</Link>.
             </p>
           </Prose>
         </div>
@@ -93,7 +91,7 @@ export default function Register() {
       <Band id="money">
         <div className="max-w-[68ch]">
           <div>
-            <H2 sub="USD 630 per person, and here is exactly what it buys.">
+            <H2 sub="USD 630 per person, and what it covers.">
               Fees and scholarships
             </H2>
             <Prose className="mt-6">
@@ -106,10 +104,9 @@ export default function Register() {
                 <li>Entry to all four socials</li>
               </ul>
               <p>
-                There is a <strong>scholarship</strong>, and anyone planning to attend may apply.
-                It can waive part or all of the registration fee and contribute to travel.
-                Allocations are made by a Scholarship Board, which will be set up and announced
-                shortly.
+                Anyone planning to attend can apply for a <strong>scholarship</strong>. It can cover
+                some or all of the registration fee and part of your travel. A Scholarship Board
+                decides who gets one; we will announce its members soon.
               </p>
             </Prose>
           </div>
@@ -119,21 +116,20 @@ export default function Register() {
       <Band id="judges" tone="cream">
         <div className="max-w-[68ch]">
           <div>
-            <H2 sub="Australs runs on the judges teams bring with them.">Judges</H2>
+            <H2 sub="Each university brings judges with its teams.">Judges</H2>
             <Prose className="mt-6">
               <p>
-                Universities bring judges alongside their teams. The rule is{" "}
-                <strong>N&minus;1</strong>: one judge for every team after the first.
+                The rule is <strong>N&minus;1</strong>: a university brings one judge for every
+                team after its first. Two teams means one judge, three teams means two.
               </p>
               <p>
-                You can also come as an <strong>invited adjudicator</strong>, with no team attached.
-                Applications go out soon and anyone, from anywhere in the world, may apply. The
-                adjudication core alone assesses them, and decides how much subsidy each selected
-                adjudicator receives.
+                You can also come as an <strong>invited adjudicator</strong>, without a team. Anyone
+                in the world can apply, and applications open soon. The adjudication core picks the
+                invited adjudicators and decides how much of their costs we cover.
               </p>
               <p>
-                Judge briefings, the adjudication guide and feedback expectations will all be
-                published on the <Link href="/resources/">prep page</Link> before the tournament.
+                We will post the judge briefings and the adjudication guide on the{" "}
+                <Link href="/resources/">prep page</Link> before the tournament.
               </p>
             </Prose>
           </div>
@@ -143,30 +139,28 @@ export default function Register() {
       <Band id="equity" tone="navy">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <H2 sub="Every tournament says it takes equity seriously. What matters is whether you know who to tell, and what happens after you do.">
+            <H2 sub="Who to tell if something goes wrong, and what happens next.">
               Equity
             </H2>
             <Prose className="mt-6 text-cream/88">
               <p>
-                There will be an equity team with its own confidential contact, independent of the
-                organising committee and the adjudication core. The team is announced closer to the
-                championship.
+                An equity team, separate from the organising committee and the adjudication core,
+                will handle complaints in confidence. We will announce its members and contact
+                address closer to the tournament.
               </p>
               <p>
-                Once chosen, the equity team publishes the equity policy, with input from the
-                adjudication core and the organising committee: what counts, how to raise
-                something, who reads it and what happens next.
+                The equity team will then publish the equity policy. It will say what counts as an
+                equity issue, how to raise one, who reads it and what happens next.
               </p>
               <p>
-                Dietary, accessibility and accommodation needs are asked for on a form once your
-                registration is confirmed, and they go to the organising committee rather than the
-                equity team.
+                Dietary, access and room needs go to the organising committee, not the equity team.
+                We will ask for them once your registration is confirmed.
               </p>
             </Prose>
           </div>
           <div className="space-y-3 self-center">
             <Pending who="the Equity team">
-              Who sits on the equity team, and the confidential address to reach them.
+              Who is on the equity team, and their confidential email.
             </Pending>
             <Pending who="the Equity team">The equity policy, written out in full.</Pending>
           </div>
@@ -176,14 +170,11 @@ export default function Register() {
       <Band id="notify">
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
           <div>
-            <H2 sub="One message, the day it opens. Nothing else, ever.">Get the date</H2>
+            <H2 sub="How to hear when registration opens.">Get the date</H2>
             <Prose className="mt-6">
               <p>
-                We will not send you a newsletter, and we will not pass your address to anyone. When
-                registration opens you get one email with everything in it. If you would rather hear
-                it from a person, your{" "}
-                <Link href="/people/?group=advisor">regional advisor</Link> will know at the same
-                time we do.
+                We will post the dates here first. Your{" "}
+                <Link href="/people/?group=advisor">regional advisor</Link> will also pass them on.
               </p>
             </Prose>
           </div>

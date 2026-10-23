@@ -94,7 +94,7 @@ export default function Tournament() {
           <ul className="border-t border-ink/15 self-start">
             {caps.concat(people.filter((p) => p.group === "tab")).map((p) => (
               <li key={p.slug}>
-                <div className="grid gap-x-4 border-b border-ink/15 px-2 py-3 sm:grid-cols-[1fr_1fr_auto] sm:items-baseline">
+                <div className="grid gap-x-4 border-b border-ink/15 px-2 py-3 sm:grid-cols-[1fr_1fr_7.5rem] sm:items-baseline">
                   <span className="text-[14.5px]">{p.name}</span>
                   <span className="dim text-[13px] opacity-80">{p.role}</span>
                   <span className="dim datum text-[11.5px] opacity-74 sm:text-right">{p.country}</span>

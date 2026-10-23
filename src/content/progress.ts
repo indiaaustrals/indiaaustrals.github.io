@@ -69,12 +69,6 @@ export const groups: Group[] = [
         note: "Cards show each person's record until then",
         owner: "Organising committee",
       },
-      {
-        area: "People",
-        what: "A photo of Garvit Gosain",
-        note: "The card shows initials until then",
-        owner: "Garvit",
-      },
     ],
   },
   {

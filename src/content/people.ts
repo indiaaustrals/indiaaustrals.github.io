@@ -211,6 +211,7 @@ export const people: Person[] = [
     role: "Organising Committee",
     country: "India",
     region: "South Asia",
+    photo: "garvit-gosain",
     credits: [],
   },
   {

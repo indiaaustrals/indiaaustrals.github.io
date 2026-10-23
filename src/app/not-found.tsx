@@ -6,8 +6,6 @@ export const metadata = { title: "Page not found" };
 
 const all = [
   ...nav,
-  { href: "/contact", label: "Contact" },
-  { href: "/resources", label: "Prep and policies" },
   { href: "/progress", label: "Where the website stands" },
 ];
 

@@ -46,10 +46,6 @@ export default function Footer() {
               Contact
             </Link>{" "}
             ·{" "}
-            <Link href="/resources" className="underline decoration-cream/30 underline-offset-4 hover:text-gold">
-              Prep and policies
-            </Link>{" "}
-            ·{" "}
             <Link href="/progress" className="underline decoration-cream/30 underline-offset-4 hover:text-gold">
               Where the website stands
             </Link>

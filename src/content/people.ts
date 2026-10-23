@@ -23,8 +23,8 @@ export type Person = {
 };
 
 export const groupLabel: Record<Group, string> = {
-  cap: "Adjudication core",
-  tab: "Tab team",
+  cap: "Chief Adjudication Panel",
+  tab: "Tabulation team",
   oc: "Organising committee",
   senior: "Senior advisor",
   advisor: "Regional advisor",

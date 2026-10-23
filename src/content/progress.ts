@@ -7,7 +7,7 @@ export type Group = {
   items: Item[];
 };
 
-export const updated = "12 October 2026";
+export const updated = "23 October 2026";
 
 export const groups: Group[] = [
   {
@@ -18,15 +18,8 @@ export const groups: Group[] = [
     items: [
       { what: "Read what the tournament is, when it runs and where" },
       {
-        what: "Learn how the Australasian format works, speech by speech",
-        note: "For anyone who has only debated British Parliamentary",
-      },
-      {
-        what: "See all thirty-three people on the team",
-        note: "Each judge, organiser and regional advisor has a page with their debating record from the posters and bid document",
-      },
-      {
-        what: "Find your regional advisor and what they do",
+        what: "See everyone on the team, with their record under their photo",
+        note: "The Chief Adjudication Panel, the tabulation team, the organising committee and the advisors",
       },
       {
         what: "See the eighteen countries our advisors cover on a map",
@@ -34,22 +27,14 @@ export const groups: Group[] = [
       },
       {
         what: "Read a guide to Delhi",
-        note: "The venue, the hotel, nine places to visit, flights, visas, weather and what to pack",
+        note: "The venue, the hotel, places to visit and getting here",
       },
-      {
-        what: "Read how Australs has grown since 1975",
-      },
-      {
-        what: "See the fee, what it covers, and who can enter",
-        note: "USD 630: room at The Grand, airport pick-up and drop, daily buses, five lunches, five dinners, four socials",
-      },
-      { what: "Read how the rounds, motions and breaks work" },
-      { what: "Read who can apply for a scholarship" },
+      { what: "Read how registration will work, who can enter and the judge rule" },
       {
         what: "See what we have not decided yet, on the page it belongs to",
         note: "Each gap names the person who will answer it",
       },
-            { what: "Find who to ask about what, and email the tournament" },
+      { what: "Email the tournament about anything, from one page" },
       { what: "Use the site on a phone, with a keyboard or with a screen reader" },
       { what: "Check this page to see where the website stands" },
     ],
@@ -62,15 +47,27 @@ export const groups: Group[] = [
       "Each of these is a gap on the site. The name next to it is the person who has the answer.",
     items: [
       {
-        area: "Equity",
-        what: "Who is on the equity team, and their confidential email",
-        owner: "Equity team",
+        area: "Visa",
+        what: "Which visa to apply for, and the steps",
+        note: "The visa page shows the outline until the instructions come in",
+        owner: "Organising committee",
       },
       {
-        area: "Equity",
-        what: "The equity policy, written out in full",
-        note: "The equity team writes it, with input from the adjudication core and organising committee",
-        owner: "Equity team",
+        area: "Visa",
+        what: "How to ask for an invitation letter, and how long it takes",
+        owner: "Organising committee",
+      },
+      {
+        area: "In the news",
+        what: "Links to the coverage so far",
+        note: "The page is built; it lists each article once we have the links",
+        owner: "Organising committee",
+      },
+      {
+        area: "People",
+        what: "A short bio for each chief adjudicator, tab and organising committee member",
+        note: "Cards show each person's record until then",
+        owner: "Organising committee",
       },
       {
         area: "People",

@@ -1,20 +1,16 @@
-import Link from "next/link";
-import { PageHead, Band, SubNav, H2, Prose, Pending } from "@/components/Shell";
-import InterestForm from "@/components/InterestForm";
+import { PageHead, Band, SubNav, H2, Prose } from "@/components/Shell";
+import { contactEmail } from "@/content/site";
 
 export const metadata = {
   title: "Register",
   description:
-    "How registration for India Australs 2027 will work: the steps, the fee, who can enter, judges, scholarships and equity.",
+    "How registration for India Australs 2027 will work: the steps, who can enter and judges.",
 };
 
 const sections = [
   { id: "how", label: "How it works" },
   { id: "who", label: "Who can enter" },
-  { id: "money", label: "Fees and scholarships" },
   { id: "judges", label: "Bringing a judge" },
-  { id: "equity", label: "Equity" },
-  { id: "notify", label: "Get the date" },
 ];
 
 const steps = [
@@ -30,15 +26,6 @@ export default function Register() {
       <PageHead
         kicker="Register"
         title="Registration is not open yet"
-        lede="The fee and who can enter are below. We will announce the registration dates and payment details here when they are set."
-        facts={[
-          { k: "Status", v: "Not open" },
-          { k: "Opens", v: "To be announced" },
-          { k: "Fee", v: "USD 630 per person" },
-          { k: "Who may enter", v: "Universities in the Asia Pacific" },
-          { k: "Who signs up", v: "Your university" },
-          { k: "Teams per university", v: "No cap" },
-        ]}
       />
       <SubNav items={sections} />
 
@@ -73,47 +60,17 @@ export default function Register() {
               before, and there is no qualifying tournament.
             </p>
             <p>
-              Universities from the Middle East and Central Asia usually go to the European
-              championship. If yours would rather come to Delhi, register and we will consider your
-              entry.
-            </p>
-            <p>
               There is <strong>no cap</strong> on the number of teams a university can enter.
             </p>
             <p>
-              Not sure if your university can enter? Ask your{" "}
-              <Link href="/people/">regional advisor</Link>.
+              Not sure if your university can enter? Write to us at{" "}
+              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
             </p>
           </Prose>
         </div>
       </Band>
 
-      <Band id="money">
-        <div className="max-w-[68ch]">
-          <div>
-            <H2 sub="USD 630 per person, and what it covers.">
-              Fees and scholarships
-            </H2>
-            <Prose className="mt-6">
-              <p>The registration fee is <strong>USD 630</strong>. It covers:</p>
-              <ul className="list-disc space-y-1 pl-5">
-                <li>Your room at The Grand New Delhi for the whole tournament</li>
-                <li>Pick-up from and drop to the airport</li>
-                <li>Buses between The Grand and IIT Delhi every morning and evening</li>
-                <li>Five lunches and five dinners</li>
-                <li>Entry to all four socials</li>
-              </ul>
-              <p>
-                Anyone planning to attend can apply for a <strong>scholarship</strong>. It can cover
-                some or all of the registration fee and part of your travel. A Scholarship Board
-                decides who gets one; we will announce its members soon.
-              </p>
-            </Prose>
-          </div>
-        </div>
-      </Band>
-
-      <Band id="judges" tone="cream">
+      <Band id="judges">
         <div className="max-w-[68ch]">
           <div>
             <H2 sub="Each university brings judges with its teams.">Judges</H2>
@@ -124,63 +81,14 @@ export default function Register() {
               </p>
               <p>
                 You can also come as an <strong>invited adjudicator</strong>, without a team. Anyone
-                in the world can apply, and applications open soon. The adjudication core picks the
+                in the world can apply, and applications open soon. The Chief Adjudication Panel picks the
                 invited adjudicators and decides how much of their costs we cover.
               </p>
-              <p>
-                We will post the judge briefings and the adjudication guide on the{" "}
-                <Link href="/resources/">prep page</Link> before the tournament.
-              </p>
             </Prose>
           </div>
         </div>
       </Band>
 
-      <Band id="equity" tone="navy">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <H2 sub="Who to tell if something goes wrong, and what happens next.">
-              Equity
-            </H2>
-            <Prose className="mt-6 text-cream/88">
-              <p>
-                An equity team, separate from the organising committee and the adjudication core,
-                will handle complaints in confidence. We will announce its members and contact
-                address closer to the tournament.
-              </p>
-              <p>
-                The equity team will then publish the equity policy. It will say what counts as an
-                equity issue, how to raise one, who reads it and what happens next.
-              </p>
-              <p>
-                Dietary, access and room needs go to the organising committee, not the equity team.
-                We will ask for them once your registration is confirmed.
-              </p>
-            </Prose>
-          </div>
-          <div className="space-y-3 self-center">
-            <Pending who="the Equity team">
-              Who is on the equity team, and their confidential email.
-            </Pending>
-            <Pending who="the Equity team">The equity policy, written out in full.</Pending>
-          </div>
-        </div>
-      </Band>
-
-      <Band id="notify">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <H2 sub="How to hear when registration opens.">Get the date</H2>
-            <Prose className="mt-6">
-              <p>
-                We will post the dates here first. Your{" "}
-                <Link href="/people/?group=advisor">regional advisor</Link> will also pass them on.
-              </p>
-            </Prose>
-          </div>
-          <InterestForm />
-        </div>
-      </Band>
     </>
   );
 }

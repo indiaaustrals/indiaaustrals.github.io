@@ -47,29 +47,25 @@ export default function Home() {
       <Band>
         <div className="grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
-            <H2 sub="You debate at IIT Delhi in Hauz Khas and sleep at The Grand in Vasant Kunj, half an hour away by bus.">
+            <H2 sub="Australs 2027 will be hosted at IIT Delhi, Hauz Khas.">
               Delhi in late June
             </H2>
             <Prose className="mt-6">
               <p>
-                Temperatures will range between 35 and 40 degrees, with the monsoon typically
-                breaking over the city during the week. All debating rooms are air-conditioned, but
-                we recommend carrying a bottle of water with you into each room.
-              </p>
-              <p>
-                The Qutub Minar is fifteen minutes from campus by road, and Hauz Khas, with its
-                medieval reservoir and ruined madrasa, is five minutes by auto. Old Delhi is about forty minutes north
-                by metro.
+                Temperatures at the time shall range between 35 and 40 degrees celsius, with monsoon
+                typically breaking over the city during the week. All debating rooms are
+                air-conditioned. We recommend participants to carry their own water bottles and
+                umbrellas given the weather conditions.
               </p>
             </Prose>
             <ul className="mt-7 border-t border-ink/15">
               {[
                 ["The venue", "Lecture theatres and the auditorium at IIT Delhi", "/delhi/#venue"],
-                ["Accommodation", "The Grand New Delhi: twin rooms and a pool", "/delhi/#stay"],
+                ["Accommodation", "The Grand New Delhi, in Vasant Kunj", "/delhi/#stay"],
                 ["The city", "Nine things to do on a free morning", "/delhi/#city"],
                 ["Getting here", "The airport, and getting from it to the hotel", "/delhi/#getting-here"],
-                ["Visas", "Most of the region can apply online", "/delhi/#visas"],
-                ["Weather and kit", "What to pack for the monsoon", "/delhi/#weather"],
+                ["Visas", "How to get your Indian visa", "/visa/"],
+                ["In the news", "Australs 2027 in the press", "/media/"],
               ].map(([h, p, href]) => (
                 <li key={h}>
                   <Link href={href} className="rec grid gap-x-5 px-2 py-2.5 sm:grid-cols-[minmax(0,10rem)_1fr]">

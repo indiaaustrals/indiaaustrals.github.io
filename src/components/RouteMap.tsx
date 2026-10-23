@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { places, DELHI, project, MAP_W, MAP_H, WIN } from "@/content/map";
 import { people, regions } from "@/content/people";
@@ -156,7 +155,6 @@ export default function RouteMap({ tone = "navy" }: { tone?: "navy" | "paper" })
       <ul className="mt-6 grid gap-x-6 border-t border-current/15 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((pl) => {
           const who = advisorsIn(pl.name);
-          const one = who.length === 1 ? who[0] : null;
           const body = (
             <>
               <span className="flex items-baseline justify-between gap-3">
@@ -170,13 +168,7 @@ export default function RouteMap({ tone = "navy" }: { tone?: "navy" | "paper" })
           );
           return (
             <li key={pl.name}>
-              {one ? (
-                <Link href={`/people/${one.slug}/`} className="rec py-2.5">
-                  {body}
-                </Link>
-              ) : (
-                <span className="block border-b border-current/15 py-2.5">{body}</span>
-              )}
+              <span className="block border-b border-current/15 py-2.5">{body}</span>
             </li>
           );
         })}

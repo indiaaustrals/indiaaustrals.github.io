@@ -27,7 +27,7 @@ export default function Nav() {
           </span>
         </Link>
 
-        <nav className="ml-auto hidden items-stretch md:flex" aria-label="Main">
+        <nav className="ml-auto hidden items-stretch lg:flex" aria-label="Main">
           {nav.map((n) => {
             const on = path === n.href || path.startsWith(`${n.href}/`);
             return (
@@ -49,7 +49,7 @@ export default function Nav() {
 
         <Link
           href="/progress"
-          className="hidden items-center gap-2 self-center border border-ink/30 px-3 py-1.5 text-[12px] transition-colors duration-150 hover:border-navy hover:bg-navy hover:text-cream lg:flex"
+          className="hidden items-center gap-2 self-center border border-ink/30 px-3 py-1.5 text-[12px] transition-colors duration-150 hover:border-navy hover:bg-navy hover:text-cream xl:flex"
         >
           <span className="datum">{counts.waiting}</span>
           <span>open questions</span>
@@ -60,15 +60,15 @@ export default function Nav() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          className="ml-auto self-center border border-ink/30 px-3 py-1.5 text-[13px] md:hidden"
+          className="ml-auto self-center border border-ink/30 px-3 py-1.5 text-[13px] lg:hidden"
         >
           {open ? "Close" : "Menu"}
         </button>
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Main" className="border-t border-ink/15 md:hidden">
-          {[...nav, { href: "/contact", label: "Contact" }, { href: "/progress", label: "Where the website stands" }].map(
+        <nav id="mobile-nav" aria-label="Main" className="border-t border-ink/15 lg:hidden">
+          {[...nav, { href: "/progress", label: "Where the website stands" }].map(
             (n) => (
               <Link
                 key={n.href}

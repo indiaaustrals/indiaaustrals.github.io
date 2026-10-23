@@ -9,15 +9,17 @@ export const site = {
   end: "2027-07-04",
   datesLabel: "27 June – 4 July 2027",
   partners: ["Indian Debating League", "IIT Delhi Debating Society"],
-  buildUpdated: "12 October 2026",
+  buildUpdated: "23 October 2026",
 };
 
 export const nav = [
   { href: "/tournament", label: "Tournament" },
   { href: "/people", label: "People" },
   { href: "/delhi", label: "Delhi" },
-  { href: "/schedule", label: "Schedule" },
+  { href: "/visa", label: "Visa" },
+  { href: "/media", label: "In the news" },
   { href: "/register", label: "Register" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const footerNav = [
@@ -25,8 +27,8 @@ export const footerNav = [
     head: "The tournament",
     links: [
       { href: "/tournament", label: "Australs" },
-      { href: "/tournament#format", label: "The format" },
-      { href: "/schedule", label: "The week" },
+      { href: "/tournament#organisers", label: "Organisers" },
+      { href: "/media", label: "In the news" },
     ],
   },
   {
@@ -36,6 +38,7 @@ export const footerNav = [
       { href: "/delhi#stay", label: "Accommodation" },
       { href: "/delhi#city", label: "The city" },
       { href: "/delhi#getting-here", label: "Getting here" },
+      { href: "/visa", label: "Visa" },
     ],
   },
   {
@@ -43,15 +46,14 @@ export const footerNav = [
     links: [
       { href: "/register", label: "Register" },
       { href: "/register#judges", label: "Judges" },
-      { href: "/register#money", label: "Fees and scholarships" },
-      { href: "/register#equity", label: "Equity" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {
     head: "People",
     links: [
-      { href: "/people", label: "Adjudication core" },
-      { href: "/people", label: "Tab team" },
+      { href: "/people", label: "Chief Adjudication Panel" },
+      { href: "/people", label: "Tabulation team" },
       { href: "/people", label: "Organising committee" },
       { href: "/people", label: "Advisors" },
     ],

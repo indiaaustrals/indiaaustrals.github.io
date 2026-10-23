@@ -39,7 +39,8 @@ export default function Media() {
                     </div>
                   )}
                   <p className="rail mt-3 text-navy">
-                    {c.outlet} · {c.date}
+                    {c.outlet}
+                    {c.date && ` · ${c.date}`}
                   </p>
                   <h3 className="mt-1.5 text-[1.15rem] leading-snug group-hover:text-navy">
                     {c.headline}

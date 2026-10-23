@@ -59,8 +59,7 @@ export const groups: Group[] = [
       },
       {
         area: "In the news",
-        what: "Links to the coverage so far",
-        note: "The page is built; it lists each article once we have the links",
+        what: "The First India article (PDF) and the right Connect Gujarat link",
         owner: "Organising committee",
       },
       {

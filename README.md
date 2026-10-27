@@ -27,6 +27,8 @@ lists you can change without touching a page:
 | `events.ts` | The 22 tournaments those credits point at |
 | `progress.ts` | The build log that fills the `/progress` page |
 | `map.ts` | The 18 countries on the route map |
+| `visa.ts` | The visa checker's countries and the no-visa list |
+| `visa-portal.json` | Who can get an e-Visa or a visa on arrival — copied from the Indian visa portal by `python3 scripts/scrape-visa.py`; don't edit by hand |
 
 `people.ts` and `events.ts` together drive three things: the directory, a page
 per person, and the cross-index at `/record` — add a credit and every one of

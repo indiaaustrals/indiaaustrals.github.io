@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { countries, noVisaNeeded, visaLinks } from "@/content/visa";
+import { countries, eVisa, noVisaNeeded, portalChecked, visaLinks, visaOnArrival } from "@/content/visa";
 
 export default function VisaChecker() {
   const [pick, setPick] = useState("");
   const free = noVisaNeeded.includes(pick);
+  const online = eVisa.includes(pick);
+  const onArrival = visaOnArrival.includes(pick);
 
   return (
     <div className="box p-5">
@@ -29,6 +31,21 @@ export default function VisaChecker() {
             <p className="text-[1.1rem] text-navy">
               {free ? "No, you don't need a visa for India." : "Yes, you need a visa for India."}
             </p>
+            {!free && (
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-[14.5px] leading-[1.6] text-ink/82">
+                <li>
+                  {online
+                    ? "You can apply online for an e-Visa."
+                    : "You cannot get an e-Visa. Apply for a regular visa at the Indian embassy or consulate near you."}
+                </li>
+                {onArrival && (
+                  <li>
+                    You can also get a visa on arrival at Delhi airport.
+                    {pick === "United Arab Emirates" && " This is only if you have held an Indian e-Visa or regular visa before."}
+                  </li>
+                )}
+              </ul>
+            )}
             <div className="mt-4 flex flex-col gap-2">
               {visaLinks.map((l) => (
                 <a
@@ -42,6 +59,9 @@ export default function VisaChecker() {
                 </a>
               ))}
             </div>
+            <p className="mt-3 text-[12.5px] text-ink/60">
+              From the Government of India&apos;s visa portal, checked {portalChecked}. The portal has the final word.
+            </p>
           </>
         )}
       </div>

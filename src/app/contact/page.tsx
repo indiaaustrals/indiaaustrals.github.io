@@ -1,6 +1,7 @@
 import { PageHead, Band } from "@/components/Shell";
 import { people } from "@/content/people";
 import { contactEmail } from "@/content/site";
+import { softEmail } from "@/lib/softEmail";
 
 export const metadata = { title: "Contact" };
 
@@ -60,7 +61,7 @@ export default function Contact() {
               <p className="mt-2 text-[14.5px] leading-[1.66] text-ink/82">{c.p}</p>
               {c.line && (
                 <a href={`mailto:${contactEmail}`} className="datum mt-3 text-[14px] text-navy">
-                  {c.line}
+                  {softEmail(c.line)}
                 </a>
               )}
               <a
@@ -83,7 +84,7 @@ export default function Contact() {
             href={`mailto:${contactEmail}`}
             className="border border-gold/60 bg-gold/15 px-6 py-3 text-[15px] text-gold transition-colors duration-150 hover:bg-gold hover:text-ink"
           >
-            Email {contactEmail}
+            Email {softEmail(contactEmail)}
           </a>
         </div>
       </Band>

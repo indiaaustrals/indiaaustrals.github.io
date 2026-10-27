@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Rail from "./Rail";
+import { softEmail } from "@/lib/softEmail";
 
 export function PageHead({
   kicker,
@@ -19,7 +20,7 @@ export function PageHead({
       <div className="grain pointer-events-none absolute inset-0 -z-10" />
       <div className="mx-auto max-w-[1180px] px-4 pt-7">
         <Rail />
-        <div className="mt-6 grid gap-x-12 gap-y-6 pb-8 lg:grid-cols-[1.15fr_1fr]">
+        <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-x-12 gap-y-6 pb-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
           <div>
             <h1 className="text-[clamp(2.3rem,5.2vw,3.6rem)] text-ink">{title}</h1>
             {lede && (
@@ -31,14 +32,14 @@ export function PageHead({
             <dl className="box h-fit self-end">
               {facts.map((f) =>
                 f.href ? (
-                  <Link key={f.k} href={f.href} className="rec flex items-baseline gap-4 px-4 py-2.5">
-                    <dt className="rail dim w-[9.5rem] shrink-0 text-ink/70">{f.k}</dt>
-                    <dd className="text-[14px]">{f.v}</dd>
+                  <Link key={f.k} href={f.href} className="rec flex flex-col gap-0.5 px-4 py-2.5 sm:flex-row sm:items-baseline sm:gap-4">
+                    <dt className="rail dim shrink-0 text-ink/70 sm:w-[9.5rem]">{f.k}</dt>
+                    <dd className="min-w-0 text-[14px] [overflow-wrap:anywhere]">{softEmail(f.v)}</dd>
                   </Link>
                 ) : (
-                  <div key={f.k} className="flex items-baseline gap-4 border-b border-ink/15 px-4 py-2.5 last:border-0">
-                    <dt className="rail w-[9.5rem] shrink-0 text-ink/70">{f.k}</dt>
-                    <dd className="text-[14px]">{f.v}</dd>
+                  <div key={f.k} className="flex flex-col gap-0.5 border-b border-ink/15 px-4 py-2.5 last:border-0 sm:flex-row sm:items-baseline sm:gap-4">
+                    <dt className="rail shrink-0 text-ink/70 sm:w-[9.5rem]">{f.k}</dt>
+                    <dd className="min-w-0 text-[14px] [overflow-wrap:anywhere]">{softEmail(f.v)}</dd>
                   </div>
                 ),
               )}
@@ -56,7 +57,8 @@ export function SubNav({ items }: { items: { id: string; label: string }[] }) {
       aria-label="On this page"
       className="sticky top-[57px] z-30 border-b border-ink/15 bg-paper/95 backdrop-blur"
     >
-      <div className="mx-auto flex max-w-[1180px] gap-1 overflow-x-auto px-4">
+      {/* On phones the strip scrolls sideways; the fade on the right shows there is more. */}
+      <div className="mx-auto flex max-w-[1180px] gap-1 overflow-x-auto px-4 pr-12 [mask-image:linear-gradient(to_right,black_80%,transparent)] [scrollbar-width:none] sm:pr-4 sm:[mask-image:none] [&::-webkit-scrollbar]:hidden">
         {items.map((i) => (
           <a
             key={i.id}

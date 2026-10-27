@@ -35,6 +35,10 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Long email addresses and links wrap instead of pushing the page wider than a phone. */
+  a[href^="mailto:"], a[href^="http"] { overflow-wrap: anywhere; }
+  html, body { overflow-x: clip; }
+
   h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.06; }
 
   /* Paper grain, laid once under a section. */

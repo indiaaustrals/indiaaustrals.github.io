@@ -46,7 +46,8 @@ export default function RouteMap({ tone = "navy" }: { tone?: "navy" | "paper" })
     const el = scroller.current;
     if (!el) return;
     const over = el.scrollWidth - el.clientWidth;
-    if (over > 0) el.scrollLeft = over * 0.62;
+    // On a phone, open on Delhi through Asia to Australia and New Zealand; the Americas are a swipe left.
+    if (over > 0) el.scrollLeft = over;
   }, []);
 
   const lons: number[] = [];
@@ -76,7 +77,10 @@ export default function RouteMap({ tone = "navy" }: { tone?: "navy" | "paper" })
         ))}
       </div>
 
-      <div ref={scroller} className="-mx-4 mt-5 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+      <p className="mt-4 text-[12.5px] opacity-70 sm:hidden" aria-hidden="true">
+        &larr; Swipe the map to see the Americas and Europe
+      </p>
+      <div ref={scroller} className="-mx-4 mt-2 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:mt-5 sm:px-0 [&::-webkit-scrollbar]:hidden">
         <svg
           viewBox={`0 0 ${MAP_W} ${MAP_H}`}
           className="w-full min-w-[680px]"

@@ -1,6 +1,7 @@
 import { PageHead, Band, H2, Prose, Pending } from "@/components/Shell";
 import VisaChecker from "@/components/VisaChecker";
 import { contactEmail } from "@/content/site";
+import { softEmail } from "@/lib/softEmail";
 
 export const metadata = {
   title: "Visa",
@@ -20,7 +21,7 @@ const steps: { h: string; body: React.ReactNode; pending?: string }[] = [
     body: (
       <>
         Write to{" "}
-        <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(letterSubject)}`}>{contactEmail}</a>{" "}
+        <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(letterSubject)}`}>{softEmail(contactEmail)}</a>{" "}
         with the subject line &ldquo;{letterSubject}&rdquo;, your full name as on your passport, your
         passport number, your nationality and your university.
       </>
@@ -72,7 +73,7 @@ export default function Visa() {
               </p>
               <p>
                 Stuck at any step? Write to{" "}
-                <a href={`mailto:${contactEmail}?subject=${encodeURIComponent("Visa support")}`}>{contactEmail}</a>{" "}
+                <a href={`mailto:${contactEmail}?subject=${encodeURIComponent("Visa support")}`}>{softEmail(contactEmail)}</a>{" "}
                 with &ldquo;Visa support&rdquo; in the subject line.
               </p>
             </Prose>

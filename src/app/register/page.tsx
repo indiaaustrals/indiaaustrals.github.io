@@ -1,5 +1,6 @@
 import { PageHead, Band, SubNav, H2, Prose } from "@/components/Shell";
 import { contactEmail } from "@/content/site";
+import { softEmail } from "@/lib/softEmail";
 
 export const metadata = {
   title: "Register",
@@ -64,7 +65,7 @@ export default function Register() {
             </p>
             <p>
               Not sure if your university can enter? Write to us at{" "}
-              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+              <a href={`mailto:${contactEmail}`}>{softEmail(contactEmail)}</a>.
             </p>
           </Prose>
         </div>

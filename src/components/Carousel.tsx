@@ -69,7 +69,7 @@ export default function Carousel({ slides, label }: { slides: Slide[]; label: st
             <>Photo: {slides[at].credit}</>
           ))}
       </p>
-      <div className="flex justify-center gap-2 pb-2.5 pt-1">
+      <div className="flex justify-center pb-1 pt-0">
         {slides.map((s, i) => (
           <button
             key={s.src}
@@ -77,8 +77,11 @@ export default function Carousel({ slides, label }: { slides: Slide[]; label: st
             onClick={() => go(i)}
             aria-label={`Show photo ${i + 1}`}
             aria-current={i === at}
-            className={`h-2 w-2 rounded-full ${i === at ? "bg-navy" : "bg-navy/25 hover:bg-navy/50"}`}
-          />
+            className="group grid h-8 w-6 place-items-center"
+          >
+            {/* The dot stays small; the button around it is big enough for a thumb. */}
+            <span className={`h-2 w-2 rounded-full ${i === at ? "bg-navy" : "bg-navy/25 group-hover:bg-navy/50"}`} />
+          </button>
         ))}
       </div>
     </div>

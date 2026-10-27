@@ -48,8 +48,8 @@ export const groups: Group[] = [
     items: [
       {
         area: "Visa",
-        what: "Which visa to apply for, and the steps",
-        note: "The visa page shows the outline until the instructions come in",
+        what: "The list of passport countries that do not need a visa",
+        note: "The checker says yes, you need a visa, for every country except Nepal and Bhutan until the list comes in",
         owner: "Organising committee",
       },
       {

@@ -1,7 +1,7 @@
 import { PageHead, Band, H2, Prose, Pending } from "@/components/Shell";
 import VisaChecker from "@/components/VisaChecker";
 import { contactEmail } from "@/content/site";
-import { atAGlance, byCountry } from "@/content/visa";
+import { atAGlance } from "@/content/visa";
 
 export const metadata = {
   title: "Visa",
@@ -81,11 +81,7 @@ export default function Visa() {
           <div className="self-start">
             <H2 sub="Pick the country on your passport.">Do I need a visa for India?</H2>
             <div className="mt-6">
-              {byCountry.length ? (
-                <VisaChecker />
-              ) : (
-                <Pending who="the Organising committee">The visa route for each passport country.</Pending>
-              )}
+              <VisaChecker />
             </div>
           </div>
         </div>

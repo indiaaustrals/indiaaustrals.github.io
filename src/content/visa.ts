@@ -15,9 +15,6 @@ export const portalChecked: string = portal.checked;
 export const eVisa: string[] = portal.evisa;
 export const visaOnArrival: string[] = portal.visaOnArrival;
 
-/** The "at a glance" tiles, e.g. { h: "e-Visa", p: "Most of Asia Pacific applies online ..." }. */
-export const atAGlance: { h: string; p: string }[] = [];
-
 /** Passport countries that do NOT need a visa for India. Spell them as in `countries` below. */
 export const noVisaNeeded: string[] = ["Bhutan", "Nepal"];
 

@@ -1,7 +1,6 @@
 import { PageHead, Band, H2, Prose, Pending } from "@/components/Shell";
 import VisaChecker from "@/components/VisaChecker";
 import { contactEmail } from "@/content/site";
-import { atAGlance } from "@/content/visa";
 
 export const metadata = {
   title: "Visa",
@@ -85,24 +84,6 @@ export default function Visa() {
             </div>
           </div>
         </div>
-      </Band>
-
-      <Band tone="cream">
-        <H2>Visa policy at a glance</H2>
-        {atAGlance.length ? (
-          <div className="mt-8 grid gap-px border border-ink/15 bg-ink/15 sm:grid-cols-2 lg:grid-cols-4">
-            {atAGlance.map((t) => (
-              <div key={t.h} className="bg-paper-2 p-5">
-                <h3 className="text-[1.2rem] text-navy">{t.h}</h3>
-                <p className="mt-2 text-[14px] leading-[1.62] text-ink/82">{t.p}</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="mt-6 max-w-[68ch]">
-            <Pending who="the Organising committee">Which visa participants should apply for, by nationality.</Pending>
-          </div>
-        )}
       </Band>
 
       <Band>
